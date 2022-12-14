@@ -1,0 +1,50 @@
+.wide-individual.handle-onclick .individual__songs-list-show {
+    display: none;
+}
+
+.wide-individual.handle-onclick .individual__songs-list-lists {
+    height: unset;
+}
+
+.wide-individual.handle-onclick .individual__home-selec {
+    display: none;
+}
+
+.wide-individual.handle-onclick .individual-music .individual__home-selec {
+    display: flex;
+}
+
+.wide-individual.handle-onclick .app-show-content {
+    flex-wrap: wrap;
+}
+
+.wide-individual.handle-onclick .col {
+    margin-bottom: 40px;
+}
+
+.wide-individual.handle-onclick .individual__songs-list-descrip {
+    display: flex;
+}
+
+.avtactiveonplay {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    padding-top: 30%;
+}
+
+.individual__songs-list-item.audio-onplay .avt-background-hover {
+    background-color: var(--color-background-hover);
+}
+
+.individual__songs-list-item.audio-onplay .avtactiveonplay {
+    display: block;
+}
+
+.individual__songs-list-item.audio-onplay .avt-play {
+    display: none;
+}
+
