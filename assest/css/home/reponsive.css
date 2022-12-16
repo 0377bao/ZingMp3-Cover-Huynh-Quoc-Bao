@@ -196,6 +196,10 @@
         border-radius: 50%;
     }
 
+    .img-icon-menu, .img-icon-heart {
+        display: none;
+    }
+
     .individual-singer-list-item .witer {
         height: 22px;
     }

@@ -13,7 +13,7 @@
     width: var(--width-sidebar);
     height: calc(100% - var(--height-player));
     background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(30px);
     z-index: 1001;
 }
 
@@ -492,6 +492,7 @@
     display: flex;
     z-index: 10;
     cursor: pointer;
+    backdrop-filter: blur(10px);
 }
 
 .app__player-info {
@@ -520,7 +521,7 @@
 }
 
 .avt-off {
-    border-radius: 0;
+    border-radius: 15px;
     animation: quayoff 0.5s linear, avtborderoff 0.5s 0.5s linear;
 }
 
@@ -833,7 +834,7 @@
     padding: 20px 0;
     border-radius: 5px;
     border-left: 6px solid #00CC00;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
     animation: fadeLeft .5s ease, fadeOut .5s 6s linear forwards;
     transition: all .5s linear;
 }
@@ -927,13 +928,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px);
     z-index: -1;
 }
 
 .player__content {
     position: absolute;
+    backdrop-filter: blur(70px);
+    background-color: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
     right: 0;
@@ -950,6 +951,7 @@
 .layer__content-heading-logo {
     width: 50px;
     margin: 10px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .layer__content-heading-list {
@@ -962,6 +964,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 4px 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .layer__content-heading-list-item {
@@ -992,6 +995,7 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .player__content-contain {
@@ -1038,6 +1042,11 @@
     margin-top: 20px;
     font-size: 1.7rem;
     color: var(--text-color-suporting);
+}
+
+.player__content-brand-author,
+.player__content-brand-namesong {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);;
 }
 
 @keyframes aniPlayerPopUp {

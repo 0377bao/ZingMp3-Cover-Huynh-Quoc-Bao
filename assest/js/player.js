@@ -21,6 +21,25 @@ const playerPopUpBtnDown = document.querySelector('.player__popup-down')
 const appSideBar = document.querySelector('.app__sidebar')
 var isLoop = false;
 var isRandom = false;
+var currentSong = 0;
+const KEY__SETTING__LOAD = 'config';
+var appConfig = JSON.parse(localStorage.getItem(KEY__SETTING__LOAD)) || {}
+if(appConfig.currentSong) {
+    currentSong = appConfig.currentSong;
+}
+if(appConfig.isRandom) {
+    isRandom = appConfig.isRandom;
+    randombtn.classList.toggle('btn-active', isRandom)
+
+}
+if(appConfig.isLoop) {
+    isLoop = appConfig.isLoop;
+    loopbtn.classList.toggle('btn-active', isLoop)
+}
+if(appConfig.volumeValue) {
+    playerControlVolume.value = appConfig.volumeValue;
+    playerControlVolumeBar.style.width = playerControlVolume.value + '%'
+}
 
 var songs = [
     {
@@ -100,7 +119,7 @@ var songs = [
         audio: './assest/audio/haytraochoanh.mp3',
         author: 'Sơn Tùng - MTP, Snopp Dogg',
         title: 'Hãy Trao Cho Anh',
-        thumb: './assest/img/music/haytraochoanh.jpeg',
+        thumb: './assest/img/music/haytraochoanh.jpg',
         duratime: '04:05'
     },
     {
@@ -200,9 +219,13 @@ var songs = [
         duratime: '04:25'
     },
 ]
+
 const lecngthMS = songs.length;
 
-var currentSong = 0;
+function setConfig(key, value) {
+    appConfig[key] = value;
+    localStorage.setItem(KEY__SETTING__LOAD, JSON.stringify(appConfig));
+}
 
 function loadData() {
     var musicList = document.querySelector('.individual__songs-list-lists')
@@ -254,6 +277,7 @@ function loadAppPlayer() {
 loadAppPlayer();
 
 function loadPlayerPopup() {
+    document.querySelector('.player__background').style.background = `url(${songs[currentSong].thumb}) no-repeat center /cover`
     document.querySelector('.player__content-avt').style.background = `url(${songs[currentSong].thumb}) no-repeat center /cover`
     document.querySelector('.player__content-brand-namesong').innerHTML = `${songs[currentSong].title}`
     document.querySelector('.player__content-brand-author').innerHTML = `${songs[currentSong].author}`
@@ -265,9 +289,18 @@ function setupCurentSong() {
     document.querySelector('.active').classList.remove('active')
     loadAppPlayer()
     loadPlayerPopup()
-    audio.currentSong = 0;
+    audio.currentTime = 0;
     audio.play()
 }
+
+function inToOverView() {
+    document.querySelector('.active').scrollIntoView({
+        behevior: 'smooth',
+        block: 'nearest'
+    })
+}
+
+inToOverView()
 
 var listItemMusics = document.querySelectorAll('.individual__songs-list-item');
 
@@ -277,6 +310,7 @@ function handleOnclickItemMusic() {
             listItemMusics[currentSong].classList.remove('audio-onplay')
             currentSong = itemmusic.getAttribute('valueindex');
             setupCurentSong()
+            setConfig('currentSong', currentSong)
         }
     }
 }
@@ -284,27 +318,39 @@ function handleOnclickItemMusic() {
 handleOnclickItemMusic()
 
 function nextMusic() {
-    if(currentSong == lecngthMS - 1) {
-        listItemMusics[currentSong].classList.remove('audio-onplay')
-        currentSong = 0;
+    if(!isRandom) {
+        if(currentSong == lecngthMS - 1) {
+            listItemMusics[currentSong].classList.remove('audio-onplay')
+            currentSong = 0;
+        }else {
+            listItemMusics[currentSong].classList.remove('audio-onplay')
+            currentSong++;
+        }
+        setupCurentSong();
     }else {
-        listItemMusics[currentSong].classList.remove('audio-onplay')
-        currentSong++;
+        handleRandomMusic();
     }
-    setupCurentSong()
+    setConfig('currentSong', currentSong)
 }
 
 function handleNextPrevMusic() {
-    nextbtn.onclick = nextMusic
+    nextbtn.onclick = function() {
+        nextMusic()
+    }
     prevbtn.onclick = function(e) {
-        if(currentSong == 0) {
-            listItemMusics[currentSong].classList.remove('audio-onplay')
-            currentSong = lecngthMS - 1;
+        if(!isRandom) {
+            if(currentSong == 0) {
+                listItemMusics[currentSong].classList.remove('audio-onplay')
+                currentSong = lecngthMS - 1;
+            }else {
+                listItemMusics[currentSong].classList.remove('audio-onplay')
+                currentSong--;
+            }
+            setupCurentSong()
         }else {
-            listItemMusics[currentSong].classList.remove('audio-onplay')
-            currentSong--;
+            handleRandomMusic();
         }
-        setupCurentSong()
+        setConfig('currentSong', currentSong)
     }
 }
 
@@ -327,6 +373,7 @@ function handleBtnControlOnclick() {
             randombtn.classList.add('btn-active');
             isRandom = true;
         }
+        setConfig('isRandom', isRandom);
     }
 
     loopbtn.onclick = function() {
@@ -337,6 +384,7 @@ function handleBtnControlOnclick() {
             loopbtn.classList.add('btn-active');
             isLoop = true;
         }
+        setConfig('isLoop', isLoop);
     }
 }
 
@@ -367,14 +415,7 @@ function handleRandomMusic() {
 }
 
 audio.onended = function() {
-    if(!isRandom) {
-        if(isLoop === true) audio.play();
-        else {
-            nextMusic();
-        }
-    }else {
-        handleRandomMusic();
-    }
+    nextMusic()
 }
 
 appPlayerControlsProgress.oninput = function() {
@@ -412,6 +453,7 @@ playerControlVolume.oninput = function() {
     audio.volume = this.value / 100;
     playerControlVolumeBar.style.width = this.value + '%'
     audio.play();
+    setConfig('volumeValue', this.value)
 }
 
 audio.onplay = function() {
