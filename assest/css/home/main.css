@@ -1046,7 +1046,7 @@
 
 .player__content-brand-author,
 .player__content-brand-namesong {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes aniPlayerPopUp {
