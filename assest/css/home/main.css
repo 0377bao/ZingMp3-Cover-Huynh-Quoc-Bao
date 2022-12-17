@@ -919,16 +919,16 @@
     right: 0;
     bottom: var(--height-player);
     z-index: 10000000;
-    animation: aniPlayerPopdown 0.4s linear;
-    -webkit-animation: aniPlayerPopdown 0.4s linear;
-    -moz-animation: aniPlayerPopdown 0.4s linear;
+    animation: aniPlayerPopdown 0.3s linear;
+    -webkit-animation: aniPlayerPopdown 0.3s linear;
+    -moz-animation: aniPlayerPopdown 0.3s linear;
 }
 
 .player__popup.on-player-popup {
     top: 0;
-    animation: aniPlayerPopUp 0.4s linear;
-    -moz-animation: aniPlayerPopUp 0.4s linear;
-    -webkit-animation: aniPlayerPopUp 0.4s linear;
+    animation: aniPlayerPopUp 0.3s linear;
+    -moz-animation: aniPlayerPopUp 0.3s linear;
+    -webkit-animation: aniPlayerPopUp 0.3s linear;
 }
 
 .player__background {
@@ -939,12 +939,13 @@
     bottom: 0;
     z-index: -1;
     transition: all 1s linear;
+    filter: blur(5px);
 }
 
 .player__content {
     position: absolute;
-    backdrop-filter: blur(70px);
-    background-color: rgba(0, 0, 0, 0.4);
+    /* backdrop-filter: blur(20px); */
+    background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     right: 0;
