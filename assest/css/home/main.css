@@ -914,12 +914,21 @@
 .player__popup {
     will-change: top;
     position: fixed;
-    top: calc(100% + var(--height-player));
+    top: 100%;
     left: 0;
     right: 0;
     bottom: var(--height-player);
     z-index: 10000000;
-    transition: all 0.3s linear;
+    animation: aniPlayerPopdown 0.4s linear;
+    -webkit-animation: aniPlayerPopdown 0.4s linear;
+    -moz-animation: aniPlayerPopdown 0.4s linear;
+}
+
+.player__popup.on-player-popup {
+    top: 0;
+    animation: aniPlayerPopUp 0.4s linear;
+    -moz-animation: aniPlayerPopUp 0.4s linear;
+    -webkit-animation: aniPlayerPopUp 0.4s linear;
 }
 
 .player__background {
@@ -1059,9 +1068,9 @@
 }
 @keyframes aniPlayerPopdown {
     0% {
-        z-index: 1000000;
+        top: 0;
     }100% {
-        z-index: 1;
+        top: 100%;
     }
 }
 

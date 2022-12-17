@@ -481,16 +481,19 @@ audio.onpause = function() {
 }
 
 player.onclick = function() {
-    playerPopUp.style.top = 0;
-    playerPopUp.style.animation = 'aniPlayerPopUp 0.5s linear'
+    // playerPopUp.style.top = 0;
+    // playerPopUp.style.animation = 'aniPlayerPopUp 0.3s linear'
     appSideBar.classList.add('player-onpopup')
     player.classList.add('player-popup')
+    playerPopUp.classList.add('on-player-popup')
 }
 
 playerPopUpBtnDown.onclick = function() {
-    playerPopUp.style.top = 100 + '%';
+    // playerPopUp.style.top = 100 + '%';
     appSideBar.classList.remove('player-onpopup')
     player.classList.remove('player-popup')
+    playerPopUp.classList.remove('on-player-popup')
+    // playerPopUp.style.animation = 'aniPlayerPopdown 0.3s linear'
 }
 
 var stopPropagations = document.querySelectorAll('.stoppropagation');
