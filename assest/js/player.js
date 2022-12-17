@@ -43,7 +43,27 @@ if(appConfig.volumeValue) {
 
 var songs = [
     {
-        id: 0,
+        audio: './assest/audio/y2meta.com - PHONG DẠ HÀNH - BT x LVT REMIX - (TREND TIKTOK 00_00) - NHẠC THỊNH HÀNH TIKTOK 2022 (128 kbps).mp3',
+        author: 'BT Remix',
+        title: 'Phong Dạ Hành Remix',
+        thumb: './assest/img/music/phongdahanh.jpeg',
+        duratime: '04:46'
+    },
+    {
+        audio: './assest/audio/SaoCungDuoc-ThanhDat-8072594.mp3',
+        author: 'Thành Đạt',
+        title: 'Sao Cũng Được',
+        thumb: './assest/img/music/saocungduoc.jpg',
+        duratime: '05:19'
+    },
+    {
+        audio: './assest/audio/y2meta.com - CHẠY NGAY ĐI _ RUN NOW _ SƠN TÙNG M-TP _ Official Music Video (128 kbps).mp3',
+        author: 'Sơn Tùng - MTP',
+        title: 'Chạy Ngay Đi',
+        thumb: './assest/img/music/chayngaydi.jpg',
+        duratime: '04:33'
+    },
+    {
         audio: './assest/audio/BenTrenTangLau-TangDuyTan-7412012.mp3',
         author: 'Tăng Duy Tân',
         title: 'Bên Trên Tầng Lầu',
@@ -51,7 +71,6 @@ var songs = [
         duratime: '03:04'
     },
     {
-        id: 1,
         audio: './assest/audio/ChangTraiCuaEm-DuyVanPhamACV-8374089.mp3',
         author: 'Phạm Văn Duy, ACV',
         title: 'Chàng Trai Của Em',
@@ -59,7 +78,6 @@ var songs = [
         duratime: '03:49'
     },
     {
-        id: 2,
         audio: './assest/audio/ChuyenDoiTa-EmceeLDaLAB-7120974.mp3',
         author: 'Emcee LDaLAB',
         title: 'Chuyện Tình Đôi Ta',
@@ -67,7 +85,6 @@ var songs = [
         duratime: '03:28'
     },
     {
-        id: 3,
         audio: './assest/audio/cuoicungthi.mp3',
         author: 'Jack',
         title: 'Cuối Cùng Thì',
@@ -75,7 +92,6 @@ var songs = [
         duratime: '03:40'
     },
     {
-        id: 4,
         audio: './assest/audio/CuoiHongChotNha-DuyenKendyDoThanhDuyNH4T-8215885.mp3',
         author: 'Duyên Kendy, Đỗ Thanh Duy, NH4T',
         title: 'Cưới Hông Chốt Nha',
@@ -83,7 +99,6 @@ var songs = [
         duratime: '03:56'
     },
     {
-        id: 5,
         audio: './assest/audio/CuoiVoMienTay-HuynhJamesPjnboys-8268356.mp3',
         author: 'Huỳnh James, Pjnboys',
         title: 'Cưới Vợ Miền Tây',
@@ -91,7 +106,6 @@ var songs = [
         duratime: '03:38'
     },
     {
-        id: 6,
         audio: './assest/audio/DeVuong-DinhDungACV-7121634.mp3',
         author: 'Đình Dũng, ACV',
         title: 'Đế Vương',
@@ -99,7 +113,6 @@ var songs = [
         duratime: '04:22'
     },
     {
-        id: 7,
         audio: './assest/audio/DuBaoThoiTietHomNayMua-GREYD-8255553.mp3',
         author: 'GREYD',
         title: 'Dự Báo Thời Tiết Hôm Nay Mưa',
@@ -107,7 +120,6 @@ var songs = [
         duratime: '04:41'
     },
     {
-        id: 8,
         audio: './assest/audio/EmNenDungLaiLofiVersion-KhangViet-7825743.mp3',
         author: 'Khang Việt',
         title: 'Em Nên Dừng Lại',
@@ -115,7 +127,6 @@ var songs = [
         duratime: '05:10'
     },
     {
-        id: 9,
         audio: './assest/audio/haytraochoanh.mp3',
         author: 'Sơn Tùng - MTP, Snopp Dogg',
         title: 'Hãy Trao Cho Anh',
@@ -123,7 +134,6 @@ var songs = [
         duratime: '04:05'
     },
     {
-        id: 10,
         audio: './assest/audio/KhongSaoEmA-DinhTungHuy-6978623.mp3',
         author: 'Đình Tùng Huy',
         title: 'Không Sao Em À',
@@ -131,7 +141,6 @@ var songs = [
         duratime: '05:00'
     },
     {
-        id: 11,
         audio: './assest/audio/KhongTronVenNua-ChauKhaiPhongACV-7197914.mp3',
         author: 'Châu Khải Phong, ACV',
         title: 'Không Trọn Vẹn Nửa',
@@ -139,7 +148,6 @@ var songs = [
         duratime: '05:07'
     },
     {
-        id: 12,
         audio: './assest/audio/MatBaoLauDeQuenMotNguoi-QuangTrungAiPhuong-8365570.mp3',
         author: 'Quang Trung, Ái Phương',
         title: 'Mất Bao Lâu Để Quên Một Người',
@@ -147,7 +155,6 @@ var songs = [
         duratime: '05:15'
     },
     {
-        id: 13,
         audio: './assest/audio/NguoiTinhMuaDong-DucPhucMONODTAP-8343704.mp3',
         author: 'Đức Phúc, MONO, DTAP',
         title: 'Người Tình Mùa Đông',
@@ -155,7 +162,6 @@ var songs = [
         duratime: '03:42'
     },
     {
-        id: 14,
         audio: './assest/audio/PhaiChiaTayThoi-TuanHung-5566949.mp3',
         author: 'Tuấn Hưng',
         title: 'Phải Chia Tay Thôi',
@@ -163,7 +169,6 @@ var songs = [
         duratime: '05:13'
     },
     {
-        id: 15,
         audio: './assest/audio/TamLongSon-HKray-7160658.mp3',
         author: 'HKray',
         title: 'Tấm Lòng Son',
@@ -171,7 +176,6 @@ var songs = [
         duratime: '04:40'
     },
     {
-        id: 16,
         audio: './assest/audio/ThuyenQuyenAmRemix-DieuKien-7805775.mp3',
         author: 'Am',
         title: 'Thuyền Quyên Remix',
@@ -179,7 +183,6 @@ var songs = [
         duratime: '03:31'
     },
     {
-        id: 17,
         audio: './assest/audio/TongPhu-KeyoVietNam-7802406.mp3',
         author: 'Keyo',
         title: 'Tòng Phu',
@@ -187,7 +190,6 @@ var songs = [
         duratime: '04:54'
     },
     {
-        id: 18,
         audio: './assest/audio/TrotTraoDuyen-NB3HoaiBao-8246273.mp3',
         author: 'NB3 Hoài Bảo',
         title: 'Trót Trao Duyên',
@@ -195,7 +197,6 @@ var songs = [
         duratime: '04:43'
     },
     {
-        id: 19,
         audio: './assest/audio/Vaicaunoicokhiennguoithaydoi-GREYDDoanTheLanTlinh-7533673.mp3',
         author: 'GREYD, Đoàn Thế Lan, TLinh',
         title: 'Vài Câu Nói Có Khiến Người Thay Đổi',
@@ -203,7 +204,6 @@ var songs = [
         duratime: '03:45'
     },
     {
-        id: 20,
         audio: './assest/audio/VeTinh-HIEUTHUHAIHoangTonKewtiie-7730914.mp3',
         author: 'HIEUTHUHAI, Hoàng Tôn',
         title: 'Vệ Tinh',
@@ -211,7 +211,6 @@ var songs = [
         duratime: '03:39'
     },
     {
-        id: 21,
         audio: './assest/audio/WaitingForYou-MONOOnionn-7733882.mp3',
         author: 'MoNo',
         title: 'WaitingForYou',
@@ -229,9 +228,9 @@ function setConfig(key, value) {
 
 function loadData() {
     var musicList = document.querySelector('.individual__songs-list-lists')
-    const html = songs.map(function(song) {
+    const html = songs.map(function(song, index) {
         return `
-        <div class="individual__songs-list-item list-item-hover" valueindex="${song.id}">
+        <div class="individual__songs-list-item list-item-hover" valueindex="${index}">
             <div class="individual__songs-list-brand">
                 <div class="individual__songs-list-avt" style="background: url(${song.thumb}) no-repeat center /cover;">
                     <i class="fa-solid fa-play avt-play icon-hover"></i>
@@ -415,7 +414,8 @@ function handleRandomMusic() {
 }
 
 audio.onended = function() {
-    nextMusic()
+    if(isLoop) audio.play()
+    else nextMusic()
 }
 
 appPlayerControlsProgress.oninput = function() {

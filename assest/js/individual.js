@@ -1,8 +1,7 @@
-var list = document.querySelectorAll('.item')
+
 var i = 0;
 var indexSinger = 1;
 var indexSingerItem = true;
-var temp = 1;
 var individualHome = document.querySelector('.individual__home')
 var spanani = document.querySelector('.animation-span')
 var iconLefts = document.querySelectorAll('.icon-direction-left')
@@ -10,7 +9,39 @@ var iconRights = document.querySelectorAll('.icon-direction-right')
 var appShows = document.querySelectorAll('.app-show')
 var appShowContents = document.querySelectorAll('.app-show-content')
 var widthCurretnContent = 0;
+var songsListShow = document.querySelector('.individual__songs-list-show')
 
+function loadSongsListShow() {
+    const html = songs.map(function(song, index) {
+        if(index === 0) {
+            return `
+                <div class="item one" valueindex= "${index}" style="background: url(${song.thumb}) no-repeat center /cover;"></div>
+            `
+        }
+        else if(index === 1) {
+            return `
+                <div class="item two" valueindex= "${index}" style="background: url(${song.thumb}) no-repeat center /cover;"></div>
+            `
+        }
+        else if(index === 2) {
+            return `
+                <div class="item three" valueindex= "${index}" style="background: url(${song.thumb}) no-repeat center /cover;"></div>
+            `
+        }
+        else {
+            return `
+                <div class="item four" valueindex= "${index}" style="background: url(${song.thumb}) no-repeat center /cover;"></div>
+            `
+        }
+
+    })
+
+    songsListShow.innerHTML = html.join('')
+}
+
+loadSongsListShow();
+
+var list = document.querySelectorAll('.item')
 setInterval(function() {
         list[i].classList.replace('one', 'four');
         i++;
@@ -33,7 +64,20 @@ setInterval(function() {
             list[i + 1].classList.replace('three', 'two');
             list[i + 2].classList.replace('four', 'three');
         }
-}, 2000)
+}, 3000)
+
+function handleOnclickItemShowsong() {
+    for (const itemmusic of list) {
+        itemmusic.onclick = function(e) {
+            listItemMusics[currentSong].classList.remove('audio-onplay')
+            currentSong = itemmusic.getAttribute('valueindex');
+            setupCurentSong()
+            setConfig('currentSong', currentSong)
+        }
+    }
+}
+
+handleOnclickItemShowsong();
 
 individualHome.onmousemove = function(e) {
     let x = e.offsetX;

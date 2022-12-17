@@ -190,6 +190,7 @@
     transition: all 0.9s;
     will-change: opacity, transform;
     position: absolute;
+    cursor: pointer;
 }
 
 .four {
