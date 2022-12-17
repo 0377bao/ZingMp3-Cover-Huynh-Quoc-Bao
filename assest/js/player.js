@@ -489,7 +489,6 @@ player.onclick = function() {
 
 playerPopUpBtnDown.onclick = function() {
     playerPopUp.style.top = 100 + '%';
-    playerPopUp.style.animation = 'aniPlayerPopdown 0.5s linear'
     appSideBar.classList.remove('player-onpopup')
     player.classList.remove('player-popup')
 }

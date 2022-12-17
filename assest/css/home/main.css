@@ -914,12 +914,12 @@
 .player__popup {
     will-change: top;
     position: fixed;
-    top: 100%;
+    top: calc(100% + var(--height-player));
     left: 0;
     right: 0;
     bottom: var(--height-player);
-    z-index: 1000000;
-    transition: all 0.5s linear;
+    z-index: 10000000;
+    transition: all 0.3s linear;
 }
 
 .player__background {
@@ -1052,9 +1052,9 @@
 
 @keyframes aniPlayerPopUp {
     0% {
-        z-index: 1;
+        top: 100%;
     }100% {
-        z-index: 1000000;
+        top: 0;
     }
 }
 @keyframes aniPlayerPopdown {
