@@ -120,6 +120,14 @@
         width: 100%;
         height: 100%;
     }
+
+    .player__popup-songs {
+        display: none;
+    }
+
+    .app__popup {
+        transition: all 0.4s linear;
+    }
 }
 
 /* mobile */
@@ -186,10 +194,6 @@
         width: calc(100% - 14px);
     }
 
-    .individual-singer-list-item .img-show {
-        height: 88px;
-    }
-
     .individual-singer-list-item .img {
         height: unset;
         padding-top: 100%;
@@ -250,7 +254,7 @@
         margin-top: 10px;
     }
 
-    .layer__content-heading-list-item {
+    /* .layer__content-heading-list-item {
         padding: 8px 6px;
     }
 
@@ -258,10 +262,6 @@
         margin-top: 70px;
         width: 70%;
         padding-top: 70%;
-    }
-
-    .app__sidebar.player-onpopup {
-        display: none;
     }
 
     .player-popup.app__player {
@@ -306,6 +306,62 @@
     .layer__content-heading-icons-item {
         padding: 10px 12px;
         font-size: 1.3rem;
+    } */
+
+    .on-popup.app__popup .player__popup {
+        bottom: var(--height-player-mobile-onpopup);
+    }
+
+    .on-popup.app__popup .app__player {
+        bottom: 0;
+        height: var(--height-player-mobile-onpopup);
+        background-color: transparent !important;
+    }
+
+    .on-popup.app__popup .player__popup {
+        padding: 0 10px;
+    }
+
+    .on-popup.app__popup .app__player-info {
+        display: none;
+    }
+    
+    .on-popup.app__popup .app__player-controls {
+        width: 100%;
+        align-items: center;
+    }
+
+    .on-popup.app__popup .app__player-controls-btn {
+        order: 1;
+    }
+
+    .on-popup.app__popup .pause-or-play {
+        margin: 0 15px;
+    }
+ 
+    .on-popup.app__popup .app__player-controls-next {
+        font-size: 2.5rem;
+    }
+
+    .on-popup.app__popup .app__player-controls-random {
+        display: block !important;
+        font-size: 2rem;
+    }
+
+    .on-popup.app__popup .app__player-controls-next,
+    .on-popup.app__popup .app__player-controls-random {
+        padding: 10px 15px;
+    }
+
+    .on-popup.app__popup .app__player-controls-time {
+        display: flex !important;
+    }
+
+    .on-popup.app__popup .player__popup-avtshow {
+        width: 80%;
+    }
+    .on-popup.app__popup .player__popup-brand-avt {
+        margin-top: 30px;
     }
 }
 
@@ -316,7 +372,7 @@
         padding: 20px 0;
     }
 
-    .player__content-avt {
+    /* .player__content-avt {
         margin-top: 100px;
         width: 50%;
         padding-top: 50%;
@@ -333,6 +389,29 @@
     .player__content-brand-author {
         margin-top: 40px;
         font-size: 2.3rem;
+    } */
+
+    .player__popup-brand-avt {
+        margin-top: 50px;
+    }
+
+    .player__popup-brand-namesong {
+        font-size: 2.8rem;
+    }
+
+    .player__popup-brand-author {
+        font-size: 2rem;
+    }
+
+    .player__popup-brand-personlike {
+        font-size: 1.8rem;
+    }
+
+    .player__popup-brand-personlike,
+    .player__popup-brand-author,
+    .player__popup-brand-option,
+    .player__popup-brand-selec {
+        margin-top: 25px;
     }
 }
 

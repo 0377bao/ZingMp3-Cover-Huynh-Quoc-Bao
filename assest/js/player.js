@@ -16,9 +16,11 @@ const playerDuratime = document.querySelector('.app__player-controls-durationtim
 const nextbtn = document.querySelector('#next')
 const prevbtn = document.querySelector('#prev')
 const playerPopupAvt = document.querySelector('.player__content-avt')
-const playerPopUp = document.querySelector('.player__popup')
-const playerPopUpBtnDown = document.querySelector('.player__popup-down')
 const appSideBar = document.querySelector('.app__sidebar')
+const appPopUp = document.querySelector('.app__popup')
+const playerPopUpBrandAvt = document.querySelector('.player__popup-brand-avt')
+const playerPopupContentList = document.querySelector('.player__popup-list')
+const popupBtnDown = document.querySelector('.popup-btn-down')
 var isLoop = false;
 var isRandom = false;
 var currentSong = 0;
@@ -42,6 +44,13 @@ if(appConfig.volumeValue) {
 }
 
 var songs = [
+    {
+        audio: './assest/audio/y2meta.com - Ước Hẹn Đầu Xuân - Giáng Tiên (Duzme Remix) _ Audio Lyrics (128 kbps).mp3',
+        author: 'BT Remix',
+        title: 'Ước Hẹn Đầu Xuân Remix',
+        thumb: './assest/img/music/uochendauxuan.jpg',
+        duratime: '02:46'
+    },
     {
         audio: './assest/audio/y2meta.com - PHONG DẠ HÀNH - BT x LVT REMIX - (TREND TIKTOK 00_00) - NHẠC THỊNH HÀNH TIKTOK 2022 (128 kbps).mp3',
         author: 'BT Remix',
@@ -258,6 +267,10 @@ function loadData() {
         <span class="individual__songs-list-title">DANH SÁCH CÁC BÀI HÁT</span>
         <span class="individual__songs-list-title hiden-on-mobile">TÙY CHỌN</span>
     </div>` + html.join('');
+    playerPopupContentList.innerHTML = `<div class="individual__songs-list-descrip">
+    <span class="individual__songs-list-title">DANH SÁCH CÁC BÀI HÁT</span>
+    <span class="individual__songs-list-title hiden-on-mobile">TÙY CHỌN</span>
+    </div>` + html.join('');
 }
 
 loadData();
@@ -270,44 +283,72 @@ function loadAppPlayer() {
     playerNameauthor.innerHTML = `${songs[currentSong].author}`
     audio.src = `${songs[currentSong].audio}`
     playerDuratime.innerHTML = `${songs[currentSong].duratime}`
-    document.querySelector(`.individual__songs-list-item[valueindex = "${currentSong}"`).classList.add('active')
+    const addActives = document.querySelectorAll(`.individual__songs-list-item[valueindex = "${currentSong}"`)
+    for (const addActive of addActives) {
+        addActive.classList.add('active')
+    }
 }
 
 loadAppPlayer();
 
-function loadPlayerPopup() {
-    document.querySelector('.player__background').style.background = `url(${songs[currentSong].thumb}) no-repeat center /cover`
-    document.querySelector('.player__content-avt').style.background = `url(${songs[currentSong].thumb}) no-repeat center /cover`
-    document.querySelector('.player__content-brand-namesong').innerHTML = `${songs[currentSong].title}`
-    document.querySelector('.player__content-brand-author').innerHTML = `${songs[currentSong].author}`
+function loadPlayerPopupBrand() {
+    playerPopUpBrandAvt.style.background = `url(${songs[currentSong].thumb}) no-repeat center /cover`
+    document.querySelector('.player__popup-brand-namesong').innerHTML = `${songs[currentSong].title}`
+    document.querySelector('.player__popup-brand-author').innerHTML = `${songs[currentSong].author}`
+    const randomPersonLike  = Math.floor(Math.random() * 1000)
+    document.querySelector('.player__popup-brand-personlike').innerHTML = `${randomPersonLike} người yêu thích`
 }
 
-loadPlayerPopup()
+loadPlayerPopupBrand()
 
 function setupCurentSong() {
-    document.querySelector('.active').classList.remove('active')
+    const actives = document.querySelectorAll('.active')
+    for (const active of actives) {
+        active.classList.remove('active')
+    }
     loadAppPlayer()
-    loadPlayerPopup()
+    loadPlayerPopupBrand()
     audio.currentTime = 0;
     audio.play()
 }
 
 function inToOverView() {
-    document.querySelector('.active').scrollIntoView({
-        behevior: 'smooth',
-        block: 'nearest'
-    })
+    const actives = document.querySelectorAll('.active')
+    for (const active of actives) {
+        active.scrollIntoView({
+            behevior: 'smooth',
+            block: 'nearest'
+        })
+    }
 }
 
 inToOverView()
 
 var listItemMusics = document.querySelectorAll('.individual__songs-list-item');
+var listItemMusicsAudioOnplay = document.querySelectorAll(`.individual__songs-list-item[valueindex = "${currentSong}"`)
+
+function updateListItemAudioOnPlay() {
+    listItemMusicsAudioOnplay = document.querySelectorAll(`.individual__songs-list-item[valueindex = "${currentSong}"`)
+}
+
+function removeClassAudioOnplay() {
+    for (const itemaudio of listItemMusicsAudioOnplay) {
+        itemaudio.classList.remove('audio-onplay')
+    }
+}
+
+function addClassAudioOnplay() {
+    for (const itemaudio of listItemMusicsAudioOnplay) {
+        itemaudio.classList.add('audio-onplay')
+    }
+}
 
 function handleOnclickItemMusic() {
     for (const itemmusic of listItemMusics) {
         itemmusic.onclick = function(e) {
-            listItemMusics[currentSong].classList.remove('audio-onplay')
+            removeClassAudioOnplay()
             currentSong = itemmusic.getAttribute('valueindex');
+            updateListItemAudioOnPlay()
             setupCurentSong()
             setConfig('currentSong', currentSong)
         }
@@ -318,13 +359,13 @@ handleOnclickItemMusic()
 
 function nextMusic() {
     if(!isRandom) {
+        removeClassAudioOnplay()
         if(currentSong == lecngthMS - 1) {
-            listItemMusics[currentSong].classList.remove('audio-onplay')
             currentSong = 0;
         }else {
-            listItemMusics[currentSong].classList.remove('audio-onplay')
             currentSong++;
         }
+        updateListItemAudioOnPlay()
         setupCurentSong();
     }else {
         handleRandomMusic();
@@ -338,13 +379,13 @@ function handleNextPrevMusic() {
     }
     prevbtn.onclick = function(e) {
         if(!isRandom) {
+            removeClassAudioOnplay()
             if(currentSong == 0) {
-                listItemMusics[currentSong].classList.remove('audio-onplay')
                 currentSong = lecngthMS - 1;
             }else {
-                listItemMusics[currentSong].classList.remove('audio-onplay')
                 currentSong--;
             }
+            updateListItemAudioOnPlay()
             setupCurentSong()
         }else {
             handleRandomMusic();
@@ -408,8 +449,9 @@ function randomIndex() {
 }
 
 function handleRandomMusic() {
-    listItemMusics[currentSong].classList.remove('audio-onplay')
+    removeClassAudioOnplay()
     currentSong = randomIndex()
+    updateListItemAudioOnPlay()
     setupCurentSong()
 }
 
@@ -461,11 +503,11 @@ audio.onplay = function() {
     playbtn.classList.add('dis-none')
     pausebtn.classList.remove('dis-none')
     playerAvtInfo.classList.add('app__player-info--play')
-    playerPopupAvt.classList.add('app__player-info--play')
+    playerPopUpBrandAvt.classList.add('app__player-info--play')
     PlayerInfoContent.style.animation = 'showNameSong linear 3s infinite'
     playerAvt.classList.remove('avt-off')
-    playerPopupAvt.classList.remove('avt-off')
-    listItemMusics[currentSong].classList.add('audio-onplay')
+    playerPopUpBrandAvt.classList.remove('avt-off')
+    addClassAudioOnplay()
 }
 
 audio.onpause = function() {
@@ -473,27 +515,11 @@ audio.onpause = function() {
     playbtn.classList.remove('dis-none')
     pausebtn.classList.add('dis-none')
     playerAvtInfo.classList.remove('app__player-info--play')
-    playerPopupAvt.classList.remove('app__player-info--play')
+    playerPopUpBrandAvt.classList.remove('app__player-info--play')
     PlayerInfoContent.style.animation = 'unset'
     playerAvt.classList.add('avt-off')
-    playerPopupAvt.classList.add('avt-off')
-    listItemMusics[currentSong].classList.remove('audio-onplay')
-}
-
-player.onclick = function() {
-    // playerPopUp.style.top = 0;
-    // playerPopUp.style.animation = 'aniPlayerPopUp 0.3s linear'
-    appSideBar.classList.add('player-onpopup')
-    player.classList.add('player-popup')
-    playerPopUp.classList.add('on-player-popup')
-}
-
-playerPopUpBtnDown.onclick = function() {
-    // playerPopUp.style.top = 100 + '%';
-    appSideBar.classList.remove('player-onpopup')
-    player.classList.remove('player-popup')
-    playerPopUp.classList.remove('on-player-popup')
-    // playerPopUp.style.animation = 'aniPlayerPopdown 0.3s linear'
+    playerPopUpBrandAvt.classList.add('avt-off')
+    removeClassAudioOnplay()
 }
 
 var stopPropagations = document.querySelectorAll('.stoppropagation');
@@ -507,3 +533,19 @@ function stopPropagation() {
 }
 
 stopPropagation()
+
+player.onclick = function() {
+    appPopUp.style.top = 0;
+    function setupHeightplayerPopupContentList() {
+        const heightPlayercontent = document.querySelector('.player__popup-songs').clientHeight
+        const heightPlayercontenttitle = document.querySelector('.player__popup-songs-title').offsetHeight
+        playerPopupContentList.style.height = (heightPlayercontent - heightPlayercontenttitle - 50) + 'px'
+    }
+    setupHeightplayerPopupContentList()
+    appPopUp.classList.add('on-popup')
+}
+
+popupBtnDown.onclick = function() {
+    appPopUp.style.top = '100%';
+    appPopUp.classList.remove('on-popup')
+}

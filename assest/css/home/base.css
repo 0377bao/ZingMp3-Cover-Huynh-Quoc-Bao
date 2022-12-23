@@ -13,7 +13,9 @@
     --color-background-hover: rgba(0, 0, 0, 0.5);
     --color-background-search: #666666;
     --height-player-mobile: 50px;
-    --width-show-info: 120px;
+    --height-player-mobile-onpopup: 120px;
+    --width-show-info: 110px;
+    --background-color-popup: #4F4F4F;
 }
 
 * {
