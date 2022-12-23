@@ -433,7 +433,6 @@ handleBtnControlOnclick();
 
 audio.ontimeupdate = function() {
     const progressValue =  Math.floor(audio.currentTime / audio.duration * 100);
-    console.log(progressValue)
     if(progressValue) {
         appPlayerControlsProgress.value = progressValue;
         appPlayerControlsProgressBar.style.width = progressValue + '%';
@@ -477,7 +476,9 @@ appPlayerControlsProgress.oninput = function() {
 }
 
 appPlayerControlsProgress.onchange = function() {
-    audio.currentTime = Math.floor(this.value / 100 * audio.duration);
+    if(audio.currentTime) {
+        audio.currentTime = Math.floor(this.value / 100 * audio.duration);
+    }
     audio.ontimeupdate = function() {
         const progressValue =  Math.floor(audio.currentTime / audio.duration * 100);
         if(progressValue) {
