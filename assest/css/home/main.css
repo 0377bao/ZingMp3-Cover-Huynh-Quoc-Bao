@@ -234,6 +234,30 @@
     transition: all ease-in-out 0.3s;
 }
 
+.app__content-heading-home-btn {
+    font-size: 1.4rem;
+    color: var(--text-color-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    animation: animationHomeBtnHeaingOut .3s linear;
+    margin-left: 10px;
+}
+
+@keyframes animationHomeBtnHeaingOut {
+    0% {
+        transform: translateX(-100%); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
 .app__content-heading.heading-scroll {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(50px);
@@ -267,6 +291,7 @@
     border-radius: 20px;
     margin-left: 5px;
     flex: 1;
+    transition: all 0.3s linear;
 }
 
 .app__search-heading-search-before {

@@ -69,8 +69,9 @@ setInterval(function() {
 function handleOnclickItemShowsong() {
     for (const itemmusic of list) {
         itemmusic.onclick = function(e) {
-            listItemMusics[currentSong].classList.remove('audio-onplay')
+            removeClassAudioOnplay()
             currentSong = itemmusic.getAttribute('valueindex');
+            updateListItemAudioOnPlay()
             setupCurentSong()
             setConfig('currentSong', currentSong)
         }

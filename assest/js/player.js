@@ -45,6 +45,13 @@ if(appConfig.volumeValue) {
 
 var songs = [
     {
+        audio: './assest/audio/y2meta.com - Chuyện Cũ Bỏ Qua Remix Chill Ke - Bích Phương ( J02 Remix ) _ Nhạc Chill Ke Tết 2021 Hot Tik Tok (128 kbps).mp3',
+        author: 'Bích Phương, J02 Remix',
+        title: 'Chuyện Cũ Bỏ Qua Remix',
+        thumb: './assest/img/music/chuyencuboqua.webp',
+        duratime: '03:20'
+    },
+    {
         audio: './assest/audio/y2meta.com - Ước Hẹn Đầu Xuân - Giáng Tiên (Duzme Remix) _ Audio Lyrics (128 kbps).mp3',
         author: 'BT Remix',
         title: 'Ước Hẹn Đầu Xuân Remix',
@@ -267,10 +274,7 @@ function loadData() {
         <span class="individual__songs-list-title">DANH SÁCH CÁC BÀI HÁT</span>
         <span class="individual__songs-list-title hiden-on-mobile">TÙY CHỌN</span>
     </div>` + html.join('');
-    playerPopupContentList.innerHTML = `<div class="individual__songs-list-descrip">
-    <span class="individual__songs-list-title">DANH SÁCH CÁC BÀI HÁT</span>
-    <span class="individual__songs-list-title hiden-on-mobile">TÙY CHỌN</span>
-    </div>` + html.join('');
+    playerPopupContentList.innerHTML = html.join('');
 }
 
 loadData();
@@ -313,13 +317,10 @@ function setupCurentSong() {
 }
 
 function inToOverView() {
-    const actives = document.querySelectorAll('.active')
-    for (const active of actives) {
-        active.scrollIntoView({
-            behevior: 'smooth',
-            block: 'nearest'
-        })
-    }
+    document.querySelector('.active').scrollIntoView({
+        behevior: 'smooth',
+        block: 'nearest'
+    })
 }
 
 inToOverView()
@@ -432,8 +433,11 @@ handleBtnControlOnclick();
 
 audio.ontimeupdate = function() {
     const progressValue =  Math.floor(audio.currentTime / audio.duration * 100);
-    appPlayerControlsProgress.value = progressValue;
-    appPlayerControlsProgressBar.style.width = progressValue + '%';
+    console.log(progressValue)
+    if(progressValue) {
+        appPlayerControlsProgress.value = progressValue;
+        appPlayerControlsProgressBar.style.width = progressValue + '%';
+    }
     const minite = Math.floor((this.currentTime / 60));
     const second = Math.floor((this.currentTime % 60));
     if(second <= 9) {
@@ -476,8 +480,13 @@ appPlayerControlsProgress.onchange = function() {
     audio.currentTime = Math.floor(this.value / 100 * audio.duration);
     audio.ontimeupdate = function() {
         const progressValue =  Math.floor(audio.currentTime / audio.duration * 100);
-        appPlayerControlsProgress.value = progressValue;
-        appPlayerControlsProgressBar.style.width = progressValue + '%';
+        if(progressValue) {
+            appPlayerControlsProgress.value = progressValue;
+            appPlayerControlsProgressBar.style.width = progressValue + '%';
+        }else {
+            appPlayerControlsProgress.value = 0;
+            appPlayerControlsProgressBar.style.width = 0 + '%';
+        }
         const minite = Math.floor((this.currentTime / 60));
         const second = Math.floor((this.currentTime % 60));
         if(second <= 9) {

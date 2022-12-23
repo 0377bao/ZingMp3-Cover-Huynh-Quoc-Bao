@@ -121,6 +121,17 @@
         height: 100%;
     }
 
+    .app__player-controls-showprogress .progress::-webkit-slider-thumb {
+        width: 13px;
+        height: 13px;
+        transform: translateX(-2px);
+    }
+
+    .app__player-controls-showprogress:hover .progress,
+    .app__player-controls-showprogress:hover .progress-bar {
+        height: 4px;;
+    }
+
     .player__popup-songs {
         display: none;
     }
@@ -167,6 +178,14 @@
     .app__content-heading {
         left: 0;
         padding: 0;
+    }
+
+    .app__content-heading-on .app__content-heading-home-btn{
+        display: block;
+    }
+
+    .app__content-heading-on .app__content-heading-theme {
+        display: none;
     }
 
     .app__content-list-user {

@@ -14,8 +14,10 @@ const appContent = document.querySelector('.app__content');
 appContent.addEventListener('scroll',function() {
     if(appContent.scrollTop === 0) {
         appContentHeader.classList.remove('heading-scroll')
+        appContentHeader.classList.remove('app__content-heading-on')
     }else {
         appContentHeader.classList.add('heading-scroll')
+        appContentHeader.classList.add('app__content-heading-on')
     }
 })
 
@@ -95,3 +97,12 @@ function handelSideBarTablet() {
 }
 
 handelSideBarTablet();
+
+function onclickHomeBtn() {
+    const homeBtn = document.querySelector('.app__content-heading-home-btn')
+    homeBtn.onclick = function() {
+        appContent.scrollTo(0, 0)
+    }
+}
+
+onclickHomeBtn()
