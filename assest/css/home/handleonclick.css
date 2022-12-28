@@ -75,6 +75,11 @@
 }
 
 
+.app__content.on-radio .radio__highlight {
+    margin-top: 40px;
+}
+
 .app__content.on-singer .singer {
     margin-top: var(--height-content-heading);
 }
+
