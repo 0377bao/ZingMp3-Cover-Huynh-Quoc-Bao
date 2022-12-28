@@ -209,6 +209,10 @@
         padding: 6px 12px;
     }
 
+    .wide-individual {
+        padding: 0 10px;
+    }
+
     .individual__songs-list-brand {
         flex: 1;
     }
@@ -243,6 +247,10 @@
     .individual-singer-list-btn i {
         font-size: 1.5rem;
         margin-right: 2px;
+    }
+
+    .discover {
+        padding: 30px 10px 0;
     }
 
     .app__player {
