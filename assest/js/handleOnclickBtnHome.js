@@ -45,16 +45,18 @@ individual.onclick =function() {
         removeClassAppContent()
         appContent.classList.add('on-individual')
         isIndividual = true
+        appContent.scrollTo(0, 0)
         individual.classList.add('item-active')
         titleHeader.innerHTML = 'Cá Nhân - Cover | Huỳnh Quốc Bảo'
     }
 }
 discover.onclick =function() {
     if(!isDiscover) {
-        console.log(1)
         removeClassAppContent()
         appContent.classList.add('on-discover')
+        setHeightSlideShowDiscover()
         isDiscover = true
+        appContent.scrollTo(0, 0)
         discover.classList.add('item-active')
         titleHeader.innerHTML = 'ZingMp3 - Cover | Huỳnh Quốc Bảo'
     }
@@ -64,6 +66,7 @@ zingchart.onclick =function() {
         removeClassAppContent()
         appContent.classList.add('on-zingchart')
         isZingchart = true
+        appContent.scrollTo(0, 0)
         zingchart.classList.add('item-active')
         titleHeader.innerHTML = 'ZingChart - Cover | Huỳnh Quốc Bảo'
         if(!isZingchartShowAll) {
@@ -77,6 +80,7 @@ radio.onclick =function() {
         removeClassAppContent()
         appContent.classList.add('on-radio')
         isRadio = true
+        appContent.scrollTo(0, 0)
         radio.classList.add('item-active')
         titleHeader.innerHTML = 'Radio - Cover | Huỳnh Quốc Bảo'
     }
@@ -86,6 +90,7 @@ singer.onclick =function() {
         removeClassAppContent()
         appContent.classList.add('on-singer')
         isSinger = true
+        appContent.scrollTo(0, 0)
         singer.classList.add('item-active')
         titleHeader.innerHTML = 'Nghệ Sĩ - Cover | Huỳnh Quốc Bảo'
     }

@@ -101,7 +101,9 @@ handelSideBarTablet();
 function onclickHomeBtn() {
     const homeBtn = document.querySelector('.app__content-heading-home-btn')
     homeBtn.onclick = function() {
+        appContent.style.scrollBehavior = 'inherit'
         appContent.scrollTo(0, 0)
+        appContent.style.scrollBehavior = 'unset'
     }
 }
 
