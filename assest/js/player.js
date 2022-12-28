@@ -557,5 +557,13 @@ player.onclick = function() {
 
 popupBtnDown.onclick = function() {
     appPopUp.style.top = '100%';
-    appPopUp.classList.remove('on-popup')
+    if(window.innerWidth > 740) {
+        setTimeout(function() {
+            appPopUp.classList.remove('on-popup')
+        }, 300)
+    }else {
+        setTimeout(function() {
+            appPopUp.classList.remove('on-popup')
+        }, 400)
+    }
 }

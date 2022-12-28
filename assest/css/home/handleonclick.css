@@ -54,3 +54,27 @@
     left: 0;
     right: 0;
 }
+
+.app__content.on-individual .individual,
+.app__content.on-discover .discover,
+.app__content.on-zingchart .zingchart,
+.app__content.on-radio .discover,
+.app__content.on-singer .discover {
+    display: block;
+}
+
+
+.app__content.on-radio .hide-while-on-radio,
+.app__content.on-singer .hide-while-on-singer {
+    display: none;
+}
+
+.app__content.on-radio .show-while-on-radio,
+.app__content.on-singer .show-while-on-singer {
+    display: block;
+}
+
+
+.app__content.on-singer .singer {
+    margin-top: var(--height-content-heading);
+}

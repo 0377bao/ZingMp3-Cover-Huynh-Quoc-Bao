@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZingMp3 - Cover | Huỳnh Quốc Bảo</title>
+    <title>Cá Nhân - Cover | Huỳnh Quốc Bảo</title>
     <link rel="icon" type="image/x-icon" href="./assest/img/logo/hinhnenzing.webp">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assest/font-icon/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assest/css/home/base.css">
     <link rel="stylesheet" href="./assest/css/home/main.css">
     <link rel="stylesheet" href="./assest/css/individual/info.css">
+    <link rel="stylesheet" href="./assest/css/discover/discover.css">
     <link rel="stylesheet" href="./assest/css/home/handleonclick.css">
     <link rel="stylesheet" href="./assest/css/home/reponsive.css">
 </head>
@@ -32,34 +33,34 @@
             </div>
             <div class="app__sidebar-option">
                 <ul class="app__sidebar-list">
-                    <li class="app__sidebar-item item-hover item-active">
+                    <li class="app__sidebar-item item-hover item-active" id="individual">
                         <a href="#" class="app__sidebar-item-link">
-                            <i class="icon fa-solid fa-user app__sidebar-item-icon icon-hover"></i>
+                            <i class="icon fa-solid fa-user app__sidebar-item-icon"></i>
                             <span class="app__sidebar-item-title">Cá Nhân</span>
                         </a>
                     </li>
-                    <li class="app__sidebar-item item-hover updating">
+                    <li class="app__sidebar-item item-hover" id="discover">
                         <a href="#" class="app__sidebar-item-link">
-                            <i class="icon fa-solid fa-compact-disc app__sidebar-item-icon icon-hover"></i>
+                            <i class="icon fa-solid fa-compact-disc app__sidebar-item-icon"></i>
                             <span class="app__sidebar-item-title">Khám Phá</span>
                         </a>
                     </li>
-                    <li class="app__sidebar-item item-hover updating">
+                    <li class="app__sidebar-item item-hover" id="zingchart">
                         <a href="#" class="app__sidebar-item-link">
-                            <i class="icon fa-solid fa-chart-simple app__sidebar-item-icon icon-hover"></i>
+                            <i class="icon fa-solid fa-chart-simple app__sidebar-item-icon"></i>
                             <span class="app__sidebar-item-title">ZingChart</span>
                         </a>
                     </li>
-                    <li class="app__sidebar-item item-hover updating">
+                    <li class="app__sidebar-item item-hover" id="radio">
                         <a href="#" class="app__sidebar-item-link">
-                            <i class="icon fa-solid fa-volume-high app__sidebar-item-icon icon-hover"></i>
+                            <i class="icon fa-solid fa-volume-high app__sidebar-item-icon"></i>
                             <span class="app__sidebar-item-title">Radio</span>
                             <span class="app__sidebar-item-live">Live</span>
                         </a>
                     </li>
-                    <li class="app__sidebar-item item-hover updating">
+                    <li class="app__sidebar-item item-hover" id="singer">
                         <a href="#" class="app__sidebar-item-link">
-                            <i class="icon fa-brands fa-teamspeak app__sidebar-item-icon icon-hover"></i>
+                            <i class="icon fa-brands fa-teamspeak app__sidebar-item-icon"></i>
                             <span class="app__sidebar-item-title">Theo Giỏi</span>
                         </a>
                     </li>
@@ -129,7 +130,7 @@
             </div>
         </div>
         <!-- CONTENT -->
-        <div class="app__content none-scroll wide">
+        <div class="app__content none-scroll wide on-individual">
             <div class="app__content-heading">
                 <span class="app__content-heading-home-btn">
                     <i class="fa-solid fa-house"></i>
@@ -1228,6 +1229,2729 @@
                     </div>
                 </div>
             </div>
+
+            <div class="discover">
+                <div class="discover__slide row hide-while-on-radio hide-while-on-singer">
+
+                    <div class="discover__slide-navargation">
+                        <span class="discover__slide-navargation-icon discover__slide-navargation-left">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </span>
+                        <span class="discover__slide-navargation-icon discover__slide-navargation-right">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </div>
+
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-one">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide1.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-two">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide2.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-three">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide3.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-four">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide4.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-five">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide5.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-five">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide6.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-five">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide7.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-five">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide8.jpg) no-repeat center /cover;"></div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__slide-item slide-five">
+                        <div class="discover__slide-item-avt" style="background: url(./assest/img/discoverslide/slide9.jpg) no-repeat center /cover;"></div>
+                    </div>
+                </div>
+
+                <div class="discover__new2022 hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Hay Nhất Của 2022</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+    
+                    <div class="row discover__best2022 updating nowrap">
+                        <div class="col c-4 m-3 l-2-4 discover__best2022-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discoverhot2022/img1.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">40 Ca Khúc Thịnh Hành 2022</span>
+                            <span class="witer">Hoàn Thùy Linh, ERIK, Karik</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__best2022-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discoverhot2022/img2.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">40 Nghệ Sĩ Thịnh Hành 2022</span>
+                            <span class="witer">AMEE, Châu Khải Phong, Vương Anh Tú</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__best2022-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discoverhot2022/img3.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Hip-Hop Việt Nổi Bật 2022</span>
+                            <span class="witer">HIEUTHUHAI, Phúc Du, Karik</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__best2022-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discoverhot2022/img4.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Pop Balland Việt Nổi Bật 2022</span>
+                            <span class="witer">Hà Nhi, Thiều Bảo Trâm, Văn Mai Hương</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__best2022-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discoverhot2022/img5.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">V-Pop Nổi Bật 2022</span>
+                            <span class="witer">Hoàn Thùy Linh, Miu Lê, Karik</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="discover__release hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Mới Phát Hành</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+
+                    <div class="discover__release-selec">
+                        <div class="discover__release-option">
+                            <span class="discover__release-selec-icon icon-active">TẤT CẢ</span>
+                            <span class="discover__release-selec-icon hiden-on-mobile">VIỆT NAM</span>
+                            <span class="discover__release-selec-icon hiden-on-mobile">QUỐC TẾ</span>
+                        </div>
+
+                        <div class="discover__release-all">
+                            TẤT CẢ
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+
+                    <div class="discover__release-content row">
+                        <div class="col c-12 m-6 l-4 discover__release-content-list">
+                            <div class="discover__release-content-item content-item--active">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/chayngaydi.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Chạy Ngay Đi</span>
+                                    <span class="discover__release-content-descrip-author">Sơn Tùng - MTP</span>
+                                    <span class="discover__release-content-descrip-time">Hôm qua</span>
+                                </div>
+                            </div>
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/chuyencuboqua.webp) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Chuyện Cũ Bỏ Qua</span>
+                                    <span class="discover__release-content-descrip-author">Bích Phương</span>
+                                    <span class="discover__release-content-descrip-time">1 ngày trước</span>
+                                </div>
+                            </div>
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/cuoicungthi.jpeg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Cuối Cùng Thì</span>
+                                    <span class="discover__release-content-descrip-author">Jack</span>
+                                    <span class="discover__release-content-descrip-time">2 ngày trước</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-12 m-6 l-4 discover__release-content-list hiden-on-mobile">
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/devuong.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Đế Vương</span>
+                                    <span class="discover__release-content-descrip-author">Hùng Dũng</span>
+                                    <span class="discover__release-content-descrip-time">3 ngày trước</span>
+                                </div>
+                            </div>
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/cuoivomientay.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Cưới Vợ Miền Tây</span>
+                                    <span class="discover__release-content-descrip-author">Pin Boy, Huỳnh Jame</span>
+                                    <span class="discover__release-content-descrip-time">Hôm qua</span>
+                                </div>
+                            </div>
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/dubaothoitiethomnaymua.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Dự Báo Thời Tiết Hôm Nay Mưa</span>
+                                    <span class="discover__release-content-descrip-author">GREYD</span>
+                                    <span class="discover__release-content-descrip-time">Hôm qua</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-12 m-6 l-4 discover__release-content-list hiden-on-tablet-mobile">
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/haytraochoanh.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Hãy Trao Cho Anh</span>
+                                    <span class="discover__release-content-descrip-author">Sơn Tùng - MTP</span>
+                                    <span class="discover__release-content-descrip-time">1 ngày trước</span>
+                                </div>
+                            </div>
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/khongtronvennua.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Không Trọn Vẹn Nửa</span>
+                                    <span class="discover__release-content-descrip-author">Châu Khải Phong</span>
+                                    <span class="discover__release-content-descrip-time">4 ngày trước</span>
+                                </div>
+                            </div>
+                            <div class="discover__release-content-item">
+                                <div class="discover__release-content-avt" style="background: url(./assest/img/music/phaichiataythoituanhung.jpg) no-repeat center /cover;">
+                                    <div class="discover__release-content-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="discover__release-content-descrip">
+                                    <span class="discover__release-content-descrip-title">Phải Chia Tay Thôi</span>
+                                    <span class="discover__release-content-descrip-author">Tuấn Hưng</span>
+                                    <span class="discover__release-content-descrip-time">Hôm qua</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__christmas hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Merry Christmas</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+    
+                    <div class="row discover__christmas updating nowrap">
+                        <div class="col c-4 m-3 l-2-4 discover__christmas-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovermerry/merry1.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Christmas 50: Zing Choice</span>
+                            <span class="witer">50 ca khúc Giáng Sinh hay nhất do Zing MP3 chọn lựa dành riêng cho bạn</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__christmas-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovermerry/merry2.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Christmas Pop</span>
+                            <span class="witer">Giai điệu Pop dễ nghe khuấy động mùa Giáng Sinh sắp tới</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__christmas-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovermerry/merry3.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Christmas Jazz</span>
+                            <span class="witer">Nhạc Jazz và đồ ngọt, công thức hoàn hảo cho giáng sinh</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__christmas-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovermerry/merry4.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Winter Acoustic</span>
+                            <span class="witer">Đi qua mùa đông với những bản Acoustic nhẹ nhàng</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__christmas-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovermerry/merry5.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Nhạc giáng sinh bất hủ</span>
+                            <span class="witer">Chill giáng sinh cùng nhạc bất hủ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="radio hide-while-on-singer">
+                    <div class="radio__highlight">
+                        <div class="home-title">
+                            <div class="individual__title">
+                                <span>Radio Nổi Bật</span>
+                                <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                            </div>
+                        </div>
+
+                        <div class="row radio__highlight-list nowrap">
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="30.6" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio1.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/xone.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                    Xone Radio
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    47 đang nghe
+                                </span>
+                            </div>
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="0" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio2.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/v-pop.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                    V-POP
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    1k đang nghe
+                                </span>
+                            </div>
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="200" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio3.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/pladio.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                   Pladio
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    38 đang nghe
+                                </span>
+                            </div>
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="30.6" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio4.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/cham.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                    Chạm
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    176 đang nghe
+                                </span>
+                            </div>
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="100.5" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio5.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/onair.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                    On Air
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    47 đang nghe
+                                </span>
+                            </div>
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="0" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio6.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/bolero.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                    Bolero
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    431 đang nghe
+                                </span>
+                            </div>
+                            <div class="col c-3 m-2-4 l-1-7 radio__highlight-item">
+                                <div class="radio__highlight-item-stream">
+                                    <svg class="svg" width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2.5"> </circle>
+                                        <circle class = "circle-avt" cx="50" cy="50" r="48.75" fill="none" stroke="#ff4b4a" stroke-width="2.5" stroke-dasharray="306.3052837250048" stroke-dashoffset="30.6" stroke-linecap="round"> </circle>
+                                    </svg>
+
+                                    <div class="radio__highlight-item-stream-avtshow">
+                                        <div class="radio__highlight-item-stream-avt" style="background: url(./assest/img/radio/radio7.webp) no-repeat center /cover;"></div>
+                                        <div class="radio__highlight-item-stream-avtbgr"></div>
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+
+                                    <span class="radio__highlight-item-stream-live">
+                                        LIVE
+                                    </span>
+
+                                    <div class="radio__highlight-item-stream-authoravt" style="background: url(./assest/img/radio/usuk.webp) no-repeat center /cover;"></div>
+                                </div>
+                                <span class="radio__highlight-item-name nowrap-1">
+                                    US-Uk
+                                </span>
+
+                                <span class="radio__highlight-item-person nowrap-1">
+                                    146 đang nghe
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio__podcast show-while-on-radio">
+                        <div class="home-title">
+                            <div class="individual__title">
+                                <span>Khám Phá PodCast</span>
+                                <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                            </div>
+                        </div>
+        
+                        <div class="row radio__podcast-list updating nowrap">
+                            <div class="col c-4 m-3 l-2-4 radio__podcast-item">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/radiopodcast/podcast1.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Đắp Chăn Nằm Nghe Tủn Kể</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4 radio__podcast-item">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/radiopodcast/podcast2.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">XONE with Stars</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4 radio__podcast-item">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/radiopodcast/podcast3.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">How2Money x Doctor</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4 radio__podcast-item">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/radiopodcast/podcast4.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Hiếu.TV</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4 radio__podcast-item">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/radiopodcast/podcast5.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Tri Kỷ Cảm Xúc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radio__rankpodcart show-while-on-radio">
+                        <div class="home-title">
+                            <div class="individual__title">
+                                <span>Bảng Xếp Hạng PodCast</span>
+                                <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                            </div>
+                        </div>
+
+                        <div class="row radio__rankpodcart-list">
+                            <div class="col c-12 m-6 l-6">
+                                <div class="radio__rankpodcart-list-left">
+                                    <div class="radio__rankpodcart-list-item">
+                                        <span class="radio__rankpodcart-list-item-rank">1</span>
+                                        <div class="radio__rankpodcart-list-item-avt" style="background: url(./assest/img/radiopodcast/podcast1.webp) no-repeat center /cover;">
+                                            <div class="radio__rankpodcart-list-item-avt-bgr"></div>
+                                        </div>
+                                        <div class="radio__rankpodcart-list-item-des">
+                                            <span class="radio__rankpodcart-list-item-title">#31 Xin lỗi vì tôi yêu ai cũng luỵ | Đắp Chăn Nằm Nghe Tun Kể</span>
+                                            <span class="radio__rankpodcart-list-item-info">Đắp chăn nằm nghe tun kể</span>
+                                            <span class="radio__rankpodcart-list-item-time">18/12/2022 - 32 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio__rankpodcart-list-item">
+                                        <span class="radio__rankpodcart-list-item-rank">2</span>
+                                        <div class="radio__rankpodcart-list-item-avt" style="background: url(./assest/img/radiopodcast/podcast5.webp) no-repeat center /cover;">
+                                            <div class="radio__rankpodcart-list-item-avt-bgr"></div>
+                                        </div>
+                                        <div class="radio__rankpodcart-list-item-des">
+                                            <span class="radio__rankpodcart-list-item-title">Quy Tắc Nồi Cơm - Tri kỷ cảm xúc #261</span>
+                                            <span class="radio__rankpodcart-list-item-info">Tri kỷ cảm xúc</span>
+                                            <span class="radio__rankpodcart-list-item-time">19/12/2022 - 22 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio__rankpodcart-list-item">
+                                        <span class="radio__rankpodcart-list-item-rank">3</span>
+                                        <div class="radio__rankpodcart-list-item-avt" style="background: url(./assest/img/radiopodcast/podcast4.webp) no-repeat center /cover;">
+                                            <div class="radio__rankpodcart-list-item-avt-bgr"></div>
+                                        </div>
+                                        <div class="radio__rankpodcart-list-item-des">
+                                            <span class="radio__rankpodcart-list-item-title">93. Mọi việc xảy ra đều có lý do của nó</span>
+                                            <span class="radio__rankpodcart-list-item-info">Hiếu TV</span>
+                                            <span class="radio__rankpodcart-list-item-time">22/11/2022 - 17 phút</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-6">
+                                <div class="radio__rankpodcart-list-right">
+                                    <div class="radio__rankpodcart-list-item">
+                                        <span class="radio__rankpodcart-list-item-rank">4</span>
+                                        <div class="radio__rankpodcart-list-item-avt" style="background: url(./assest/img/radio/onair.webp) no-repeat center /cover;">
+                                            <div class="radio__rankpodcart-list-item-avt-bgr"></div>
+                                        </div>
+                                        <div class="radio__rankpodcart-list-item-des">
+                                            <span class="radio__rankpodcart-list-item-title">#30 Sáu công việc giúp học sinh sinh viên</span>
+                                            <span class="radio__rankpodcart-list-item-info">Đắp chăn nằm nghe tun kể</span>
+                                            <span class="radio__rankpodcart-list-item-time">18/12/2022 - 32 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio__rankpodcart-list-item">
+                                        <span class="radio__rankpodcart-list-item-rank">5</span>
+                                        <div class="radio__rankpodcart-list-item-avt" style="background: url(./assest/img/radiopodcast/podcast2.webp) no-repeat center /cover;">
+                                            <div class="radio__rankpodcart-list-item-avt-bgr"></div>
+                                        </div>
+                                        <div class="radio__rankpodcart-list-item-des">
+                                            <span class="radio__rankpodcart-list-item-title">#70 Có hẹn với Grey D tại XONE with Stars</span>
+                                            <span class="radio__rankpodcart-list-item-info">XONE with stars</span>
+                                            <span class="radio__rankpodcart-list-item-time">18/12/2022 - 45 phút</span>
+                                        </div>
+                                    </div>
+                                    <div class="radio__rankpodcart-list-item">
+                                        <span class="radio__rankpodcart-list-item-rank">6</span>
+                                        <div class="radio__rankpodcart-list-item-avt" style="background: url(./assest/img/radiopodcast/podcast3.webp) no-repeat center /cover;">
+                                            <div class="radio__rankpodcart-list-item-avt-bgr"></div>
+                                        </div>
+                                        <div class="radio__rankpodcart-list-item-des">
+                                            <span class="radio__rankpodcart-list-item-title">#29 Công thức 66/3/6/5 giúp bạn thành công</span>
+                                            <span class="radio__rankpodcart-list-item-info">Đắp chăn nằm nghe tun kể</span>
+                                            <span class="radio__rankpodcart-list-item-time">18/12/2022 - 11 phút</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__newtoday hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Nhạc Mới Mỗi Ngày</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+    
+                    <div class="row discover__newtoday-list updating nowrap">
+                        <div class="col c-4 m-3 l-2-4 discover__newtoday-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovernewtoday/img1.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">V-Pop Tháng 12/2022</span>
+                            <span class="witer">No Phước Thình, Hứa Kim Tuyền, Hà Nhi</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__newtoday-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovernewtoday/img2.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">US-UK Tháng 12/2022</span>
+                            <span class="witer">Troye Sivan, The Weeknd, SZA</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__newtoday-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovernewtoday/img3.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">K-Pop Tháng 12/2022</span>
+                            <span class="witer">Red Velvet, ITZY, Super Junior</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__newtoday-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovernewtoday/img4.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">C-Pop Tháng 12/2022</span>
+                            <span class="witer">Jolin Tsai, Ozone, Red Velvet</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__newtoday-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovernewtoday/img5.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Indie Việt Tháng 12/2022</span>
+                            <span class="witer">Changg, buitruonglinh, Thái Đinh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__paner hide-while-on-radio hide-while-on-singer">
+                    <div class="row discover__paner-list updating nowrap">
+                    <div class="col c-6 m-4 l-4 discover__paner-item">
+                        <div class="img-show">
+                            <div class="img" style="background: url(./assest/img/discoverpaner/paner1.jpg) no-repeat center /cover;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__paner-item">
+                        <div class="img-show">
+                            <div class="img" style="background: url(./assest/img/discoverpaner/paner2.jpg) no-repeat center /cover;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col c-6 m-4 l-4 discover__paner-item">
+                        <div class="img-show">
+                            <div class="img" style="background: url(./assest/img/discoverpaner/paner3.jpg) no-repeat center /cover;">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="singer hide-while-on-radio">
+                    <div class="discover__singer-home">
+                        <span class="icon-direction icon-direction-left dis-none hiden-on-tablet-mobile">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </span>
+                        <span class="icon-direction icon-direction-right hiden-on-tablet-mobile">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                        <div class="app-show discover__singer">
+                            <div class="row app-show-content discover__singer-list">
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/chidan.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/ducphuc.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/hoaminzy.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/huongly.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/jack.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/justate.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/karik.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/mr.siro.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/onlyc.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/trinhthangbinh.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                                <div class="col c-4 m-2-4 l-1-7 discover__singer-item">
+                                    <img src="./assest/img/discoversinger/ẻik.png" alt="" class="discover__singer-item-avt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="singer__news show-while-on-singer">
+                        <div class="row singer__news-list">
+                            <div class="col c-12 m-6 l-6 singer__news-item">
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt1.jpg) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Ninh Dương Lan Ngọc</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">14 tháng 10 lúc 14:36</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Ở nhà có photo Rio chụp dì sửa mệt nghỉ luôn 🤣🤣🤣 chỉnh qài ko đẹp được luôn. Xin nhờ 500 anh em chỉnh dùm Ngọc tấm hình này sao mà coa thể đẹp đươc nhỉ</span>
+                                    <img src="./assest/img/singernews/img1.jpg" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>319</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt2.jpg) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Ngọc Yến</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">14 tháng 12 lúc 17:45</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Nhìn như này ai biết đanh đá đâu</span>
+                                    <img src="./assest/img/singernews/img2.jpg" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>138</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt3.webp) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Bảo Anh</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">17 tháng 10 lúc 07:36</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">❤️</span>
+                                    <img src="./assest/img/singernews/img3.png" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>298</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt4.webp) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Đình Phong</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">16 tháng 11 lúc 00:05</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Thức dậy ở một nơi rất xa...</span>
+                                    <img src="./assest/img/singernews/img4.png" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>89</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-6 row singer__news-item">
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt5.jpg) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Chi Pu</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">
+                                                14 tháng 10 lúc 00:36
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Sự thật thì luôn luôn đơn giản nhưng people make it complicated, nên là mình cứ enjoy cái moment này</span>
+                                    <img src="./assest/img/singernews/img5.jpg" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>310</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt6.webp) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Tăng Phúc</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">14 tháng 11 lúc 11:46</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Chúng ta hiểu lầm, chứ không hề hiểu nhau</span>
+                                    <img src="./assest/img/singernews/img6.png" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>138</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt7.webp) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Hồ Quang Hiếu</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">14 tháng 11 lúc 11:44</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Đi tập thì đc 5p chứ ra đứng tạo dáng 2 tiếng là chuyện bình thường 🤣..</span>
+                                    <img src="./assest/img/singernews/img7.png" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>298</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singer__news-posts">
+                                    <div class="singer__news-posts-des">
+                                        <div class="singer__news-posts-des-avt" style="background: url(./assest/img/singernews/avt8.webp) no-repeat center /cover;"></div>
+                                        <div class="singer__news-posts-des-brand">
+                                            <div class="singer__news-posts-des-info">
+                                                <span class="singer__news-posts-des-name">Hamlet Trương</span>
+                                                <span class="singer__news-posts-des-care">
+                                                    <span class="singer__news-posts-des-care--btn"><i class="fa-solid fa-circle"></i></span>
+                                                    Quan tâm
+                                                </span>
+                                            </div>
+                                            <span class="singer__news-posts-des-time">14 tháng 11 lúc 11:44</span>
+                                        </div>
+                                    </div>
+
+                                    <span class="singer__news-posts-caption">Ăn buffet chay ở Saigon mà không biết chỗ cổ điển siêu ngon này thì thiếu sót quá.</span>
+                                    <img src="./assest/img/singernews/img8.png" alt="" class="singer__news-posts-img">
+                                    <div class="singer__news-posts-option">
+                                        <div class="singer__news-posts-option-like">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>89</span>
+                                        </div>
+                                        <div class="singer__news-posts-option-comment">
+                                            <i class="fa-regular fa-comment"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__top100 hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Top 100</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+    
+                    <div class="row discover__top100 updating nowrap">
+                        <div class="col c-4 m-3 l-2-4 discover__top100-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovertop100/top1.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Top 100 Bài Hát Nhạc Trẻ Hay</span>
+                            <span class="witer">MONO, Vương Anh Tú, Keyo</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__top100-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovertop100/top2.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Top 100 Pop Âu Mỹ Hay Nhất</span>
+                            <span class="witer">Adele, Justin Bieber, Meghan Trainor</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__top100-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovertop100/top3.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Top 100 Nhạc EDM</span>
+                            <span class="witer">Alan Walker, K-391, Emelie Hollow</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__top100-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovertop100/top4.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Top 100 Nhạc Trữ Tình Hay</span>
+                            <span class="witer">Như Quỳnh, Mạnh Quỳnh, Tố My</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__top100-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discovertop100/top5.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Top 100 Nhạc Hàn Quốc Hay</span>
+                            <span class="witer">BLACKPINK, IVE, (G)I-DLE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__xone hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>XONE's CORNER</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+    
+                    <div class="row discover__xone-list updating nowrap">
+                        <div class="col c-4 m-3 l-2-4 discover__xone-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/album/album9.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">2022 New Hits</span>
+                            <span class="witer">Nhạc MỚI của Mabel, Harry, Styles</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__xone-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/playlist/playlist11.jpg) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">2021 Hot Songs</span>
+                            <span class="witer">BTS, Harry, Styles</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__xone-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/album/album7.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">2022 New Hits</span>
+                            <span class="witer">Thư giãn với  Phùng Khánh, Linh, Trang</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__xone-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/album/album6.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">Asian Boyband</span>
+                            <span class="witer">Âm nhạc từ các nhóm nhạc nam châu Á</span>
+                        </div>
+                        <div class="col c-4 m-3 l-2-4 discover__xone-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/album/album2.webp) no-repeat center /cover;">
+                                    <div class="img-background-hover"></div>
+                                    <div class="img-icon">
+                                        <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                        <i class="fa-solid fa-play img-icon-play"></i>
+                                        <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="title">This Is EDM</span>
+                            <span class="witer">Nghe nhạc điện tử cực cháy tại đây</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__newmusic hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Nhạc Mới</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+
+                        <div class="individual__home-selec">
+                            <span class="individual__home-allbtn">
+                                TẤT CẢ
+                                <i class="fa-solid fa-angle-right"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="app-show discover__newmusic-top">
+                        <span class="icon-direction-left">
+                        </span>
+                        <span class="icon-direction-right">
+                        </span>
+                        <div class="row app-show-content discover__newmusic-top">
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/thuthaylaemthaylong.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Thu Thay Lá, Em Thay Lòng </span>
+                                        <span class="discover__newmusic-top-item-author">Quang Hảo, LQ MEDIA</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#1</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/quabatngo.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Quá Bất Ngờ</span>
+                                        <span class="discover__newmusic-top-item-author">Dương Hoàng, Hoa Hồng Dại</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#2</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/coaidoianhdau.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Có Ai Đợi Anh Đâu</span>
+                                        <span class="discover__newmusic-top-item-author">Cao Thái Sơn</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#3</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/cuoithoi2.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Cưới Thôi 2</span>
+                                        <span class="discover__newmusic-top-item-author">Masew</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#4</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/detuiomembanggiaidieunay.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Để Tôi Ôm Em Bằng Giai Điệu Này</span>
+                                        <span class="discover__newmusic-top-item-author">Kay Minh, GREY D</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#5</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/emvantinvaitinhyeuay.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Em Vẫn Tin Vào Tình Yêu Ấy</span>
+                                        <span class="discover__newmusic-top-item-author">Lương Bính Hữu</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#6</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/neumotngaygaplai.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Nếu Một Ngày Gặp Lại</span>
+                                        <span class="discover__newmusic-top-item-author">Trương Thảo Nhi</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#7</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item">
+                                <div class="img-show discover__newmusic-top-item-avt">
+                                    <div class="img" style="background: url(./assest/img/discovernewtop/dinhmenh.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="discover__newmusic-top-item-content">
+                                    <div class="discover__newmusic-top-item-brand">
+                                        <span class="discover__newmusic-top-item-namesong">Định Mệnh</span>
+                                        <span class="discover__newmusic-top-item-author">Quang Hảo, LQ MEDIA</span>
+                                    </div>
+
+                                    <div class="discover__newmusic-top-item-des">
+                                        <span class="discover__newmusic-top-item-top">#8</span>
+                                        <span class="discover__newmusic-top-item-time">23.12.2022</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col c-12 m-6 l-4">
+                                <div class="discover__newmusic-top-item discover__newmusic-top-item-last">
+                                    XEM TẤT CẢ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-show discover__newmusic-listsong">
+                        <span class="icon-direction-left">
+                        </span>
+                        <span class="icon-direction-right">
+                        </span>
+                        <div class="row app-show-content discover__newmusic-list">
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/discoverslide/slide1.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Đêm Nhạc Vợ Chồng Son</span>
+                                <span class="witer">Lưu Ánh Loan</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/discoverslide/slide2.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Tết Này Phất Luôn</span>
+                                <span class="witer">Hồng Thanh</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/discoverslide/slide8.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Xuân Này Cha Sẽ Về</span>
+                                <span class="witer">Quách Ngọc Tuyên, Huy Văn</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/cuoicungthi.jpeg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Cuối Cùng Thì</span>
+                                <span class="witer">Jack</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/devuong.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Đế Vương</span>
+                                <span class="witer">Đình Dũng, ACV</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/khongtronvennua.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Không TRọn Vẹn Nửa</span>
+                                <span class="witer">Châu Khải Phong</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/chuyencuboqua.webp) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Chuyện Cũ Bỏ Qua</span>
+                                <span class="witer">Bích Phương</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/dubaothoitiethomnaymua.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Dự Báo Thời Tiết Hôm Nay Mưa</span>
+                                <span class="witer">GREYD</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/emla.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Em Là</span>
+                                <span class="witer">MONO</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/haytraochoanh.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Hãy Trao Cho Anh</span>
+                                <span class="witer">Sơn Tùng - MTP, Snopp Dogg</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/phaichiataythoituanhung.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Phải Chia Tay Thôi</span>
+                                <span class="witer">Tuấn Hưng</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/vetinh.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Vệ Tinh</span>
+                                <span class="witer">HIEUTHUHAI, Hoàng Tôn</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/changtraicuaem.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Chàng Trai Của Em</span>
+                                <span class="witer">Phạm Văn Duy, ACV</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/vaicaunoicokhiennguoithaydoi.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Vài Câu Nói Có Khiến Người Thay Đổi</span>
+                                <span class="witer">GREYD, Đoàn Thế Lan, TLinh</span>
+                            </div>
+                            <div class="col c-4 m-3 l-2-4">
+                                <div class="img-show">
+                                    <div class="img" style="background: url(./assest/img/music/matbaolaudequenmotnguoi.jpg) no-repeat center /cover;">
+                                        <div class="img-background-hover"></div>
+                                        <div class="img-icon">
+                                            <i class="fa-solid fa-heart img-icon-heart icon-hover"></i>
+                                            <i class="fa-solid fa-play img-icon-play"></i>
+                                            <i class="fa-solid fa-ellipsis  img-icon-menu icon-hover"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="title">Mất Bao Lâu Để Quên Một Người</span>
+                                <span class="witer">Quang Trung, Thế Lan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__event hide-while-on-radio hide-while-on-singer">
+                    <div class="home-title">
+                        <div class="individual__title">
+                            <span>Sự Kiện</span>
+                            <i class="fa-solid fa-chevron-right individual__home-songs-icon icon-hover"></i>
+                        </div>
+                    </div>
+    
+                    <div class="row discover__event-list nowrap">
+                        <div class="col c-12 m-6 l-4 discover__event-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discover__event/event1.webp) no-repeat center /cover;">
+                                    <div class="img-background"></div>
+                                </div>
+
+                                <div class="discover__event-item-descrip">
+                                    <span class="discover__event-item-btn">PHÁT HÀNH BÀI HÁT</span>
+                                    <div class="discover__event-item-title">Thương Phận Đời Con Gái - Hồ Việt Trung</div>
+                                    <span class="discover__event-item-time">19:00 Thứ Sáu, 30 Tháng 12</span>
+                                </div>
+                            </div>
+
+                            <div class="discover__event-item-favurite">
+                                <div class="discover__event-item-avts">
+                                    <span class="discover__event-item-care">Lượt quan tâm</span>
+                                    <div class="discover__event-item-listavt">
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album1.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album2.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album3.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album4.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album5.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album6.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <span> + 756</span>
+                                    </div>
+                                </div>
+                                <span class="discover__event-item-list-item-btn">QUAN TÂM</span>
+                            </div>
+                        </div>
+                        <div class="col c-12 m-6 l-4 discover__event-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discover__event/event2.webp) no-repeat center /cover;">
+                                    <div class="img-background"></div>
+                                </div>
+
+                                <div class="discover__event-item-descrip">
+                                    <span class="discover__event-item-btn">PHÁT HÀNH BÀI HÁT</span>
+                                    <div class="discover__event-item-title">Yêu Mấy Cũng Dừng Lại - MR.SiRo</div>
+                                    <span class="discover__event-item-time">20:00 Thứ Sáu, 27 Tháng 12</span>
+                                </div>
+                            </div>
+
+                            <div class="discover__event-item-favurite">
+                                <div class="discover__event-item-avts">
+                                    <span class="discover__event-item-care">Lượt quan tâm</span>
+                                    <div class="discover__event-item-listavt">
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album7.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album8.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album9.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album10.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album11.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/album/album12.webp) no-repeat center /cover;"></div>
+                                        </div>
+                                        <span> + 1K</span>
+                                    </div>
+                                </div>
+                                <span class="discover__event-item-list-item-btn">QUAN TÂM</span>
+                            </div>
+                        </div>
+                        <div class="col c-12 m-6 l-4 discover__event-item">
+                            <div class="img-show">
+                                <div class="img" style="background: url(./assest/img/discover__event/event3.webp) no-repeat center /cover;">
+                                    <div class="img-background"></div>
+                                </div>
+
+                                <div class="discover__event-item-descrip">
+                                    <span class="discover__event-item-btn">PHÁT HÀNH BÀI HÁT</span>
+                                    <div class="discover__event-item-title">Người Thương Em Đây Mà - Đinh Kiến Phong</div>
+                                    <span class="discover__event-item-time">19:00 Thứ Năm, 19 Tháng 12</span>
+                                </div>
+                            </div>
+
+                            <div class="discover__event-item-favurite">
+                                <div class="discover__event-item-avts">
+                                    <span class="discover__event-item-care">Lượt quan tâm</span>
+                                    <div class="discover__event-item-listavt">
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/playlist/playlist1.jpg) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/playlist/playlist2.jpg) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/playlist/playlist3.jpg) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/playlist/playlist4.jpg) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/playlist/playlist5.jpg) no-repeat center /cover;"></div>
+                                        </div>
+                                        <div class="discover__event-item-list-item">
+                                            <div class="discover__event-item-list-avt" style="background: url(./assest/img/playlist/playlist6.jpg) no-repeat center /cover;"></div>
+                                        </div>
+                                        <span> + 996</span>
+                                    </div>
+                                </div>
+                                <span class="discover__event-item-list-item-btn">QUAN TÂM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discover__partner hide-while-on-radio hide-while-on-singer">
+                    <span class="discover__partner-title">ĐỐI TÁC ÂM NHẠC</span>
+                    <div class="row discover__partner-list">
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner1.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner2.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner3.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner4.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner5.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner6.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner7.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner8.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner9.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                        <div class="col c-4 m-3 l-1-5 discover__partner-item">
+                            <div class="discover__partner-item-avt">
+                                <div class="discover__partner-item-avt-img" style="background: url(./assest/img/discoverpartner/partner10.png) no-repeat center /contain;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zingchart">
+                <span class="zingchart__title">#zingchart
+                    <span class="zingchart-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </span>
+                </span>
+
+                <ul class="zingchart__list">
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top top-one">1</span>
+                            <span class="zingchart__list-item-status up">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/bentrentanglau.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Bên trên tầng lầu</span>
+                                    <span class="zingchart__list-item-author">Tăng Duy Tâng</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Bên trên tầng lầu (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:03
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top top-two">2</span>
+                            <span class="zingchart__list-item-status up">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/changtraicuaem.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Chàng trai của em</span>
+                                    <span class="zingchart__list-item-author">Phạm Văn Duy, ACV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Chàng trai của em
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:49
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top top-three">3</span>
+                            <span class="zingchart__list-item-status down">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/chayngaydi.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Chạy ngay đi</span>
+                                    <span class="zingchart__list-item-author">Sơn Tùng - MTP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Chạy ngay đi (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:33
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">4</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/chuyencuboqua.webp) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Chuyện cũ bỏ qua</span>
+                                    <span class="zingchart__list-item-author">Bích Phương</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Chuyện cũ bỏ qua (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:03
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">5</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/chuyendoita.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Chuyện tình đôi ta</span>
+                                    <span class="zingchart__list-item-author">DeLab</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Chuyện đôi ta (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:28
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">6</span>
+                            <span class="zingchart__list-item-status up">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/cuoicungthi.jpeg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Cuối cùng thì</span>
+                                    <span class="zingchart__list-item-author">Jack</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Cuối cùng thì (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:40
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">7</span>
+                            <span class="zingchart__list-item-status down">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/cuoihongchotnha.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Cưới hông chốt nha</span>
+                                    <span class="zingchart__list-item-author">Duyên KenDy, Đỗ Thanh Duy, NH4T</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Cưới hông chốt nha
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:56
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">8</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/cuoivomientay.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Cưới vợ miền tây</span>
+                                    <span class="zingchart__list-item-author">Huỳnh James, Pinboys</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Cưới vợ miền tây
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:38
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">9</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/devuong.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Đế vương</span>
+                                    <span class="zingchart__list-item-author">Đình Dũng, ACV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Đế vương
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:03
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">10</span>
+                            <span class="zingchart__list-item-status up">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/dubaothoitiethomnaymua.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Dự báo thời tiết hôm nay mưa</span>
+                                    <span class="zingchart__list-item-author">GREYD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Dự báo thời tiết hôm nay mưa (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:41
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">11</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/emla.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Em là</span>
+                                    <span class="zingchart__list-item-author">MONO</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Em là (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:13
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">12</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/emnendunglai.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Em nên dừng lại</span>
+                                    <span class="zingchart__list-item-author">Khang Việt</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Em nên dừng lại (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                               05:51
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">13</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/haytraochoanh.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Hãy trao cho anh</span>
+                                    <span class="zingchart__list-item-author">Sơn Tùng - MTP, Snop Dogg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Hãy trao cho anh
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                04:05
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">14</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/khongsaoema.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Không sao em à</span>
+                                    <span class="zingchart__list-item-author">Đình Tùng Huy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Không sao em à (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                05:51
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">15</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/khongtronvennua.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Không trọn vẹn nửa</span>
+                                    <span class="zingchart__list-item-author">Châu Khải Phong,ACV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Không trọn vẹn nửa
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                05:57
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">16</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/matbaolaudequenmotnguoi.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Mất bao lâu để quên một người</span>
+                                    <span class="zingchart__list-item-author">Quang Trung, Ái Phương</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Mất bao lâu để quên một người
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                05:15
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">17</span>
+                            <span class="zingchart__list-item-status up">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/nguoitinhmuadong.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Người tình mùa đông</span>
+                                    <span class="zingchart__list-item-author">Đức Phúc, MONO, Delab</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Người tình mùa đông (Cover)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:42
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">18</span>
+                            <span class="zingchart__list-item-status now">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/vaicaunoicokhiennguoithaydoi.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Vài câu nói có khiến người thay đổi</span>
+                                    <span class="zingchart__list-item-author">GREYD, Đoàn Thế Lan, TLinh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Vài câu nói có khiến người thay đổi
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                03:45
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">19</span>
+                            <span class="zingchart__list-item-status down">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/uochendauxuan.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Ước hẹn đầu xuân</span>
+                                    <span class="zingchart__list-item-author">TBT Remix</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Ước hẹn đầu xuân (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                02:46
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="zingchart__list-item">
+                        <div class="zingchart__list-item-header">
+                            <span class="zingchart__list-item-top">20</span>
+                            <span class="zingchart__list-item-status up">
+                                <div class="zingchart__list-item-status--up"></div>
+                                <div class="zingchart__list-item-status--down"></div>
+                                <div class="zingchart__list-item-status--now"></div>
+                            </span>
+                            <div class="zingchart__list-item-descrip">
+                                <div class="zingchart__list-item-avt" style="background: url(./assest/img/music/saocungduoc.jpg) no-repeat center /cover;">
+                                    <div class="zingchart__list-item-avt-bgr"></div>
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="zingchart__list-item-brand">
+                                    <span class="zingchart__list-item-namesong">Sao cũng được</span>
+                                    <span class="zingchart__list-item-author">Thành Đạt</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="zingchart__list-item-body hiden-on-mobile">
+                            Sao cũng được (Single)
+                        </span>
+
+                        <div class="zingchart__list-item-footer hiden-on-mobile">
+                            <span class="zingchart__list-item-time">
+                                05:19
+                            </span>
+                            <div class="zingchart__list-item-option">
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                                <span class="zingchart__list-item-btn">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="zingchart__btn">
+                    <span class="zingchart__btn-add">
+                        Xem Tất Cả
+                    </span>
+                </div>
+            </div>
         </div>
         <!-- PLAYER -->
         <div class="app__popup">
@@ -1363,5 +4087,7 @@
     <script src="./assest/js/main.js"></script>
     <script src="./assest/js/player.js"></script>
     <script src="./assest/js/individual.js"></script>
+    <script src="./assest/js/discover.js"></script>
+    <script src="./assest/js/handleOnclickBtnHome.js"></script>
 </body>
 </html>

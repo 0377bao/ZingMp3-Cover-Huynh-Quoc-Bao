@@ -104,6 +104,9 @@ body {
    width: 100%;
    overflow-x: auto;
    scroll-behavior: smooth;
+   will-change: scroll;
+   -webkit-will-change: scroll;
+   -moz-will-change: scroll;
 }
 
 .app-show::-webkit-scrollbar {
@@ -122,15 +125,15 @@ body {
 }
 
 .img {
-    width: 95%;
-    padding-top: 95%;
+    width: 100%;
+    padding-top: 100%;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: all 0.7s;
 }
 
 .img-show:hover .img{
-    transform: scale(1.1);
+    transform: scale(1.1) translateZ(0);
 }
 
 .img-show:hover .img-background-hover {
@@ -215,4 +218,20 @@ body {
 .witer:hover {
     color: var(--color-main) !important;
     text-decoration: underline;
+}
+
+.nowrap-1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.individual__home-allbtn {
+    font-size: 1.2rem;
+    color: var(--text-color-suporting);
+    cursor: pointer;
+}
+
+.individual__home-allbtn i {
+    font-size: 1.2rem;
 }

@@ -10,6 +10,7 @@ var appShows = document.querySelectorAll('.app-show')
 var appShowContents = document.querySelectorAll('.app-show-content')
 var widthCurretnContent = 0;
 var songsListShow = document.querySelector('.individual__songs-list-show')
+var widthCurretnContent = []
 
 function loadSongsListShow() {
     const html = songs.map(function(song, index) {
@@ -88,27 +89,30 @@ individualHome.onmousemove = function(e) {
 }
 
 for(let i = 0; i< appShows.length; i++) {
+    widthCurretnContent[i] = 0
     iconRights[i].onclick = function() {
-        widthCurretnContent += appShowContents[i].clientWidth;
-        if(widthCurretnContent > 0) {
+        widthCurretnContent[i] += appShowContents[i].clientWidth;
+        console.log(widthCurretnContent[i])
+        console.log(i)
+        if(widthCurretnContent[i] > 0) {
             iconLefts[i].classList.add('icon-active');
         }
-        if(widthCurretnContent >= appShowContents[i].scrollWidth - appShowContents[i].clientWidth) {
-            widthCurretnContent = appShowContents[i].scrollWidth - appShowContents[i].clientWidth;
+        if(widthCurretnContent[i] >= appShowContents[i].scrollWidth - appShowContents[i].clientWidth) {
+            widthCurretnContent[i] = appShowContents[i].scrollWidth - appShowContents[i].clientWidth;
             iconRights[i].classList.remove('icon-active')
         }
-        appShows[i].scrollTo(widthCurretnContent, 0)
+        appShows[i].scrollTo(widthCurretnContent[i], 0)
     }
     iconLefts[i].onclick = function() {
-        widthCurretnContent -= appShowContents[i].clientWidth;
-        if(widthCurretnContent < appShowContents[i].scrollWidth - appShowContents[i].clientWidth) {
+        widthCurretnContent[i] -= appShowContents[i].clientWidth;
+        if(widthCurretnContent[i] < appShowContents[i].scrollWidth - appShowContents[i].clientWidth) {
             iconRights[i].classList.add('icon-active')
         }
-        if(widthCurretnContent <= 0) {
-            widthCurretnContent = 0;
+        if(widthCurretnContent[i] <= 0) {
+            widthCurretnContent[i] = 0;
             iconLefts[i].classList.remove('icon-active');
         }
-        appShows[i].scrollTo(widthCurretnContent, 0)
+        appShows[i].scrollTo(widthCurretnContent[i], 0)
     }
 }
 

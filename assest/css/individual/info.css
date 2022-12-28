@@ -1,3 +1,6 @@
+.individual {
+    display: none;
+}
 
 .individual__home {
     position: relative;

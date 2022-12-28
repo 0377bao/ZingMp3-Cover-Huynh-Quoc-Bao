@@ -139,6 +139,10 @@
     .app__popup {
         transition: all 0.4s linear;
     }
+
+    .discover__partner-list {
+        padding: 0;
+    }
 }
 
 /* mobile */
@@ -381,6 +385,69 @@
     }
     .on-popup.app__popup .player__popup-brand-avt {
         margin-top: 30px;
+    }
+
+    .discover__slide {
+        width: 100%;
+        justify-content: flex-end;
+        overflow: hidden;
+        margin: 32px 0 50px;
+    }
+
+    .discover__slide-item-avt {
+        padding-top: 55%;
+    }
+
+    .discover .title  {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+
+    .discover .witer  {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .radio__highlight-item {
+        padding: 0 5px;
+    }
+
+    .radio__highlight-item-stream-authoravt {
+        display: none;
+    }
+
+    .radio__highlight-item-name {
+        font-size: 1.4rem;
+    }
+
+    .radio__highlight-item-person {
+        padding-top: 5px;
+        font-size: 1.2rem;
+    }
+
+    .zingchart__list {
+        max-height: 90vh;
+        overflow: hidden;
+    }
+
+    .zingchart__list-item-header {
+        width: 100%;
+    }
+
+    .zingchart__list-item-status {
+        padding-left: 0;
+    }
+    
+    .radio__rankpodcart-list-right {
+        margin-top: 20px;
+    }
+
+    .item-active {
+        border-left: unset;
+    }
+
+    .app__sidebar-item.item-hover:hover {
+        opacity: 1;
     }
 }
 
