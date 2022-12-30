@@ -165,7 +165,7 @@
 
 .discover__release-selec-icon {
     padding: 5px 15px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
     border-radius: 20px;
     cursor: pointer;
     margin-right: 10px;
@@ -207,11 +207,11 @@
 }
 
 .discover__release-content-item.content-item--active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .discover__release-content-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .discover__release-content-avt {
@@ -410,7 +410,7 @@
 .radio__rankpodcart-list-right{
     padding: 10px 0;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .radio__rankpodcart-list-item {
@@ -540,7 +540,7 @@
 .singer__news-posts {
     width: 100%;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
     margin-top: 10px;
     padding: 20px;
 }
@@ -674,7 +674,7 @@
     display: flex;
     padding: 15px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
     cursor: pointer;
 }
 
@@ -911,6 +911,7 @@
 }
 
 .discover__partner-item-avt {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     background-color: white;
     border-radius: 5px;
     padding: 5px;
@@ -973,7 +974,7 @@
 }
 
 .zingchart__list-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .zingchart__list-item-header {
@@ -988,7 +989,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px var(--text-color-main);
     padding: 10px 0;
     width: 75px;
     text-align: center;
@@ -1047,7 +1048,7 @@
     position: absolute;
     width: 15px;
     height: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--text-color-main);
     border-radius: 5px;
     display: none;
 }

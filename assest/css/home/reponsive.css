@@ -4,6 +4,10 @@
         display: none;
     }
 
+    .hiden-on-tablet-mobile-im {
+        display: none !important;
+    }
+
     .individual__home-selec,
     .individual__songs-list-time,
     .list-item-hover:hover .icon-hover.icon-menu-horizontal {
@@ -231,10 +235,6 @@
         display: none;
     }
 
-    .individual-singer-list-item .witer {
-        height: 22px;
-    }
-
     .individual-singer-list-item .title-suporting {
         padding: 2px;
     }
@@ -456,6 +456,14 @@
 
     .app__sidebar-item.item-hover:hover {
         opacity: 1;
+    }
+
+    .modal__body {
+        width: 80%;
+    }
+
+    .on-popup.app__popup .app__player {
+        box-shadow: unset;
     }
 }
 

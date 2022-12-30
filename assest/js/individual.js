@@ -119,7 +119,7 @@ for(let i = 0; i< appShows.length; i++) {
 function handleOnclickNavigation() {
     const overView = document.querySelector('#overview');
     const song = document.querySelector('#songs');
-    const singer = document.querySelector('#singer');
+    const singer = document.querySelector('#singerindividual');
     const playlist = document.querySelector('#playlist');
     const album = document.querySelector('#album');
     const mv = document.querySelector('#mv');

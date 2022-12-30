@@ -1,5 +1,5 @@
 :root {
-    --text-color-suporting: #999;
+    --text-color-suporting: rgb(178, 174, 174);
     --text-color-main: white;
     --text-color-main-reverse: black;
     --color-main: #d1ab00;
@@ -11,11 +11,14 @@
     --background-hilight: #3e3e3e;
     --color-paner: rgb(248, 231, 28);
     --color-background-hover: rgba(0, 0, 0, 0.5);
-    --color-background-search: #666666;
+    --item-hover: rgba(255, 255, 255, 0.1);
     --height-player-mobile: 50px;
     --height-player-mobile-onpopup: 120px;
     --width-show-info: 110px;
     --background-color-popup: #4F4F4F;
+    --background-appsidebar: rgba(0, 0, 0, 0.2);
+    --background-header: rgba(0, 0, 0, 0.5);
+    --background-active: rgb(120 120 120)
 }
 
 * {
@@ -57,7 +60,7 @@ body {
 
 .item-active {
     border-left: 3px solid var(--color-main);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .icon-active {
@@ -79,11 +82,11 @@ body {
 
 .icon-hover:hover {
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--item-hover);
 }
 
 .list-item-hover:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .app-arrow__icon {
@@ -149,7 +152,7 @@ body {
 .img-icon {
     width: 100%;
     font-size: 1.8rem;
-    color: var(--text-color-main);
+    color: white;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -169,7 +172,10 @@ body {
 
 .img-icon-menu,
 .img-icon-heart {
-    padding: 5px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
 }
 
 .img-icon-play {

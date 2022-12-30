@@ -68,11 +68,11 @@ function onInputFoCus() {
     const headingSearch = document.querySelector('.app__search-heading-search');
 
     inputSearch.onfocus = function() {
-        headingSearch.style.backgroundColor = 'var(--color-background-search)';
+        headingSearch.style.backgroundColor = 'var(--background-color-popup)';
     }
 
     inputSearch.onblur = function() {
-        headingSearch.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        headingSearch.style.backgroundColor = 'var(--item-hover';
     }
 }
 onInputFoCus();

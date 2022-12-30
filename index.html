@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assest/css/home/reponsive.css">
 </head>
 <body>
-    <div class="app" style="background-image: url(./assest/img/logo/anhnen.jpg)">
+    <div class="app">
         <!-- SIDEBAR -->
         <div class="app__sidebar app__sidebar-tablet">
             <div class="app__sidebar-logo hiden-on-mobile">
@@ -263,7 +263,7 @@
                     <li class="individual__home-item" id="playlist" classonclick="individual-playlist">PLAYLIST</li>
                     <li class="individual__home-item hiden-on-mobile" id="album" classonclick="individual-album">ALBUM</li>
                     <li class="individual__home-item hiden-on-mobile" id="mv" classonclick="individual-mv">MV</li>
-                    <li class="individual__home-item" id="singer" classonclick="individual-singer">NGHỆ SĨ</li>
+                    <li class="individual__home-item" id="singerindividual" classonclick="individual-singer">NGHỆ SĨ</li>
                     <li class="individual__home-item hiden-on-mobile updating" id="upload">TẢI LÊN</li>
                 </ul>
 
@@ -4011,7 +4011,7 @@
                     </div>
                 </div>
             </div>
-            <div class="app__player" style="background-color: rgba(0, 0, 0, 0.5);">
+            <div class="app__player">
                 <div class="app__player-info">
                     <div class="app__player-info-avt"></div>
                     <div class="app__player-info-brand">
@@ -4083,6 +4083,35 @@
         </div>
     </div>
 
+    <div class="modal">
+        <div class="modal__body">
+            <span class="title-modal">Giao Diện</span>
+            <div class="theme">
+                <div class="theme__theme">
+                    <span class="theme__title">Chủ Đề</span>
+                    <div class="row theme__list"></div>
+                </div>
+                <div class="theme__theme">
+                    <span class="theme__title">Nghệ Sĩ</span>
+                    <div class="row theme__list">
+                    </div>
+                </div>
+                <div class="theme__theme">
+                    <span class="theme__title">Màu Tối</span>
+                    <div class="row theme__list">
+                    </div>
+                </div>
+                <div class="theme__theme">
+                    <span class="theme__title">Màu Sáng</span>
+                    <div class="row theme__list">
+                    </div>
+                </div>
+            </div>
+            <span class="btn-modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+        </div>
+    </div>
     <div id="toast"></div>
     <script src="./assest/js/main.js"></script>
     <script src="./assest/js/player.js"></script>

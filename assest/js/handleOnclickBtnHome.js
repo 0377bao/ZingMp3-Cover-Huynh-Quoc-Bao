@@ -95,3 +95,5 @@ singer.onclick =function() {
         titleHeader.innerHTML = 'Nghệ Sĩ - Cover | Huỳnh Quốc Bảo'
     }
 }
+
+appContent.scrollTo(0, 0)

@@ -49,7 +49,7 @@
     font-weight: 700;
     padding: 10px;
     color: var(--text-color-main);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .individual__home-list {
@@ -57,7 +57,7 @@
     width: 738px;
     list-style: none;
     display: flex;
-    background-color: #3e3e3e;
+    background-color: var(--item-hover);
     border-radius: 21px;
     justify-content: center;
     padding: 4px 0;
@@ -72,7 +72,7 @@
 }
 
 .home-item--active {
-    background-color: rgb(120 120 120);
+    background-color: var(--background-active);
     border-radius: 15px;
 }
 
@@ -98,14 +98,14 @@
 }
 
 .individual__home-vip-btn {
-    color: #333;
-    background-color: #f8e71c;
+    color: var(--text-color-main-reverse);
+    background-color: var(--color-paner);
     padding: 0px 14px;
 }
  
 .individual__home-vip-input {
     color: var(--text-color-main);
-    background-color: var(--background-hilight);
+    background-color: var(--item-hover);
     padding: 2px 20px;
 }
  
@@ -117,7 +117,7 @@
     height: 30px;
     line-height: 30px;
     border-radius: 50%;
-    background-color: var(--background-hilight);
+    background-color: var(--item-hover);
     cursor: pointer;
 }
  
@@ -145,7 +145,7 @@
 .individual__home-songs-upload {
     margin-right: 20px;
     border-radius: 15px;
-    background-color: var(--background-hilight);
+    background-color: var(--item-hover);
     padding: 6px 22px;
     cursor: pointer;
 }
@@ -163,14 +163,14 @@
 
 .individual__home-playall {
     border-radius: 15px;
-    background-color: #f8e71c;
+    background-color: var(--color-paner);
     padding: 6px 22px;
     cursor: pointer;
 }
 
 .individual__home-playall .individual__home-selec-title,
 .individual__home-playall .individual__home-songs-icon {
-    color: rgb(59, 59, 59);
+    color: var(--text-color-main-reverse);
 }
 
 .individual__songs-list {
@@ -266,7 +266,7 @@
 }
 
 .individual__songs-list-item.active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--item-hover);
 }
 
 .individual__songs-list-brand {
@@ -286,7 +286,7 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: var(--text-color-main);
+    color: white;
     font-size: 1.4rem;
     display: none;
 }
@@ -501,13 +501,14 @@
 }
 
 .individual-singer-list-item .witer{
-    margin-top: 10px;
+    padding: 10px 0 5px;
     color: var(--text-color-main);
     font-size: 1.4rem;
 }
 
 .individual-singer-list-item .title-suporting {
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    padding: 5px;
 }
 
 .individual-singer-list-btn {
@@ -520,6 +521,7 @@
     border-radius: 15px;
     cursor: pointer;
     background-color: var(--color-paner);
+    color: var(--text-color-main-reverse);
 }
 
 .individual-singer-list-btn i {

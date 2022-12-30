@@ -21,9 +21,23 @@ const appPopUp = document.querySelector('.app__popup')
 const playerPopUpBrandAvt = document.querySelector('.player__popup-brand-avt')
 const playerPopupContentList = document.querySelector('.player__popup-list')
 const popupBtnDown = document.querySelector('.popup-btn-down')
+const rootStyle = document.documentElement.style
 var isLoop = false;
 var isRandom = false;
 var currentSong = 0;
+var colorIsBackground = false;
+var indexItemTheme = 0
+var backGround = './assest/img/theme/themetheme/themebackground/xone.jpg'
+var textColorMain = 'white'
+var textColorSuporting = '#999'
+var textColorMainReverse = 'black'
+var colorMain = '#d1ab00'
+var colorPaner = 'rgb(248, 231, 28)'
+var itemHover = 'rgba(255, 255, 255, 0.1)'
+var colorBackgroundPopup = '#4F4F4F'
+var colorBackgroundAppsidebar = 'rgba(0, 0, 0, 0.2)'
+var colorBackgroundHeader = 'rgba(0, 0, 0, 0.5)'
+
 const KEY__SETTING__LOAD = 'config';
 var appConfig = JSON.parse(localStorage.getItem(KEY__SETTING__LOAD)) || {}
 if(appConfig.currentSong) {
@@ -234,6 +248,429 @@ var songs = [
         duratime: '04:25'
     },
 ]
+
+var themeTheme = [
+    {
+        avt: './assest/img/theme/themetheme/themeavt/xone.jpg',
+        nametheme: 'XONE',
+        backGround : './assest/img/theme/themetheme/themebackground/xone.jpg',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'black',
+        colorMain : '#d1ab00',
+        colorPaner : 'rgb(248, 231, 28)',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#4F4F4F',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.2)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themetheme/themeavt/zingmusic.jpg',
+        nametheme: 'Zing Music',
+        backGround : './assest/img/theme/themetheme/themebackground/zma.svg',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'black',
+        colorMain : '#ed2b91',
+        colorPaner : '#ed2b91',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#4b1178',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.2)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themetheme/themeavt/thapeffiec.jpg',
+        nametheme: 'Tháp Eiffel',
+        backGround : './assest/img/theme/themetheme/themebackground/eiffel.jpg',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'white',
+        colorMain : 'hsl(272deg 70% 59%)',
+        colorPaner : 'hsl(272deg 70% 59%)',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#363636',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.2)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    }
+]
+
+var themeSinger = [
+    {
+        avt: './assest/img/theme/themesinger/themeavt/jack.jpg',
+        nametheme: 'Jack',
+        backGround : './assest/img/theme/themesinger/themebackgound/jack.jpg',
+        textColorMain : 'white',
+        textColorSuporting : '#bab8b3',
+        textColorMainReverse : 'black',
+        colorMain : '#D08011',
+        colorPaner : '#D08011',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#605c52',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.2)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themesinger/themeavt/IU.jpg',
+        nametheme: 'IU',
+        backGround : './assest/img/theme/themesinger/themebackgound/iu.jpg',
+        textColorMain : 'black',
+        textColorSuporting : '#666',
+        textColorMainReverse : 'white',
+        colorMain : '#c24793',
+        colorPaner : '#c24793',
+        itemHover : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundPopup : '#efedeb',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundHeader : 'rgba(255, 255, 255, 0.8)',
+    },
+    {
+        avt: './assest/img/theme/themesinger/themeavt/ji-chang-wook.jpg',
+        nametheme: 'Ji Chang Wook',
+        backGround : './assest/img/theme/themesinger/themebackgound/ji-chang-wook.jpg',
+        textColorMain : 'black',
+        textColorSuporting : '#666',
+        textColorMainReverse : 'white',
+        colorMain : 'rgb(25 102 178)',
+        colorPaner : 'rgb(25 102 178)',
+        itemHover : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundPopup : 'rgb(209 237 240)',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundHeader : 'rgba(255, 255, 255, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themesinger/themeavt/rose.jpg',
+        nametheme: 'Rose',
+        backGround : './assest/img/theme/themesinger/themebackgound/rose.jpg',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'white',
+        colorMain : '#3560f5',
+        colorPaner : '#3560f5',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#1a3570',
+        colorBackgroundAppsidebar : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    }
+]
+
+var themeColorBack = [
+    {
+        avt: './assest/img/theme/themecolorblack/toi.jpg',
+        nametheme: 'Tối',
+        backGround : '#1e1e1e',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'white',
+        colorMain : '#9b4de0',
+        colorPaner : '#9b4de0',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#333333',
+        colorBackgroundAppsidebar : 'rgba(255, 255, 255, 0.05)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themecolorblack/tim.jpg',
+        nametheme: 'Tím',
+        backGround : '#170f23',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'white',
+        colorMain : '#9b4de0',
+        colorPaner : '#9b4de0',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#333333',
+        colorBackgroundAppsidebar : 'rgba(255, 255, 255, 0.05)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themecolorblack/xanhbien.jpg',
+        nametheme: 'Xanh Biển',
+        backGround : '#162a45',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'white',
+        colorMain : '#3b68ef',
+        colorPaner : '#3b68ef',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#333333',
+        colorBackgroundAppsidebar : 'rgba(255, 255, 255, 0.05)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+    {
+        avt: './assest/img/theme/themecolorblack/xanhdam.jpg',
+        nametheme: 'Xanh Đậm',
+        backGround : '#0f1a2e',
+        textColorMain : 'white',
+        textColorSuporting : '#999',
+        textColorMainReverse : 'white',
+        colorMain : '#158370',
+        colorPaner : '#158370',
+        itemHover : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundPopup : '#333333',
+        colorBackgroundAppsidebar : 'rgba(255, 255, 255, 0.05)',
+        colorBackgroundHeader : 'rgba(0, 0, 0, 0.5)',
+    },
+]
+
+var themeColorLight = [
+    {
+        avt: './assest/img/theme/themecolorlight/sang.jpg',
+        nametheme: 'Sáng',
+        backGround : '#fff',
+        textColorMain : 'black',
+        textColorSuporting : '#555',
+        textColorMainReverse : 'white',
+        colorMain : '#8d22c3',
+        colorPaner : '#8d22c3',
+        itemHover : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundPopup : '#fff',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundHeader : 'rgba(255, 255, 255, 0.3)',
+    },
+    {
+        avt: './assest/img/theme/themecolorlight/xam.jpg',
+        nametheme: 'Xám',
+        backGround : 'rgb(229 227 223)',
+        textColorMain : 'black',
+        textColorSuporting : '#555',
+        textColorMainReverse : 'white',
+        colorMain : 'rgb(100 70 70)',
+        colorPaner : 'rgb(100 70 70)',
+        itemHover : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundPopup : '#fff',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundHeader : 'rgba(255, 255, 255, 0.3)',
+    },
+    {
+        avt: './assest/img/theme/themecolorlight/xanhnhac.jpg',
+        nametheme: 'Xanh Nhạc',
+        backGround : 'rgb(206 217 217)',
+        textColorMain : 'black',
+        textColorSuporting : '#555',
+        textColorMainReverse : 'white',
+        colorMain : 'rgb(14 128 128)',
+        colorPaner : 'rgb(14 128 128)',
+        itemHover : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundPopup : 'rgb(224 235 235)',
+        colorBackgroundAppsidebar : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundHeader : 'rgba(255, 255, 255, 0.3)',
+    },
+    {
+        avt: './assest/img/theme/themecolorlight/hongcanhsen.jpg',
+        nametheme: 'Hồng Cánh Xen',
+        backGround : 'rgb(249 219 219)',
+        textColorMain : 'black',
+        textColorSuporting : '#555',
+        textColorMainReverse : 'white',
+        colorMain : 'rgb(183 36 121)',
+        colorPaner : 'rgb(183 36 121)',
+        itemHover : 'rgba(0, 0, 0, 0.1)',
+        colorBackgroundPopup : 'rgb(253 232 232)',
+        colorBackgroundAppsidebar : 'rgba(255, 255, 255, 0.1)',
+        colorBackgroundHeader : 'rgba(255, 255, 255, 0.2)',
+    },
+]
+
+function loadTheme() {
+    const themeLists = document.querySelectorAll('.theme__list')
+    let temp = 0;
+    let html = ''
+    html = themeTheme.map(function(value) {
+        return `
+        <div class="col c-6 m-3 l-2-4">
+            <div class="theme__list-item isBackground" indexthemvalue="${temp++}">
+                <div class="theme__list-item-avt" style="background: url(${value.avt}) no-repeat center /cover;">
+                    <div class="theme__list-item-avt-btn hiden-on-tablet-mobile-im">
+                        <span class="theme__list-item-avt-apply btn-apply">ÁP DỤNG</span>
+                        <span class="theme__list-item-avt-review">XEM TRƯỚC</span>
+                    </div>
+                    <div class="theme__list-item-avt-bgr"></div>
+                    <span class="theme__list-item-avt-check">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+                <span class="theme__list-item-name">${value.nametheme}</span>
+            </div>
+        </div>
+        `
+    }).join('\n')
+    themeLists[0].innerHTML = html
+
+    html = themeSinger.map(function(value) { 
+        return `
+        <div class="col c-6 m-3 l-2-4">
+            <div class="theme__list-item isBackground" indexthemvalue="${temp++}">
+                <div class="theme__list-item-avt" style="background: url(${value.avt}) no-repeat center /cover;">
+                    <div class="theme__list-item-avt-btn hiden-on-tablet-mobile-im">
+                        <span class="theme__list-item-avt-apply btn-apply">ÁP DỤNG</span>
+                        <span class="theme__list-item-avt-review">XEM TRƯỚC</span>
+                    </div>
+                    <div class="theme__list-item-avt-bgr"></div>
+                    <span class="theme__list-item-avt-check">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+                <span class="theme__list-item-name">${value.nametheme}</span>
+            </div>
+        </div>
+        `
+    }).join('\n')
+    themeLists[1].innerHTML = html
+
+    html = themeColorBack.map(function(value) {
+        return `
+        <div class="col c-6 m-3 l-2-4">
+            <div class="theme__list-item theme__theme-item" indexthemvalue="${temp++}">
+                <div class="theme__list-item-avt" style="background: url(${value.avt}) no-repeat center /cover;">
+                    <div class="theme__list-item-avt-btn hiden-on-tablet-mobile-im">
+                        <span class="theme__list-item-avt-apply btn-apply">ÁP DỤNG</span>
+                        <span class="theme__list-item-avt-review">XEM TRƯỚC</span>
+                    </div>
+                    <div class="theme__list-item-avt-bgr"></div>
+                    <span class="theme__list-item-avt-check">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+                <span class="theme__list-item-name">${value.nametheme}</span>
+            </div>
+        </div>
+        `
+    }).join('\n')
+    themeLists[2].innerHTML = html
+
+    html = themeColorLight.map(function(value) {
+        return `
+        <div class="col c-6 m-3 l-2-4">
+            <div class="theme__list-item theme__theme-item" indexthemvalue="${temp++}">
+                <div class="theme__list-item-avt" style="background: url(${value.avt}) no-repeat center /cover;">
+                    <div class="theme__list-item-avt-btn hiden-on-tablet-mobile-im">
+                        <span class="theme__list-item-avt-apply btn-apply">ÁP DỤNG</span>
+                        <span class="theme__list-item-avt-review">XEM TRƯỚC</span>
+                    </div>
+                    <div class="theme__list-item-avt-bgr"></div>
+                    <span class="theme__list-item-avt-check">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                </div>
+                <span class="theme__list-item-name">${value.nametheme}</span>
+            </div>
+        </div>
+        `
+    }).join('\n')
+    themeLists[3].innerHTML = html
+}
+
+loadTheme()
+
+var arrayTheme = ((themeTheme.concat(themeSinger)).concat(themeColorBack)).concat(themeColorLight)
+
+if(appConfig.indexItemTheme) {
+    const indexModal = appConfig.indexItemTheme.toFixed(0)
+    indexItemTheme = indexModal
+    backGround = arrayTheme[indexModal].backGround
+    textColorMain = arrayTheme[indexModal].textColorMain
+    textColorSuporting = arrayTheme[indexModal].textColorSuporting
+    textColorMainReverse = arrayTheme[indexModal].textColorMainReverse
+    colorMain = arrayTheme[indexModal].colorMain
+    colorPaner = arrayTheme[indexModal].colorPaner
+    itemHover = arrayTheme[indexModal].itemHover
+    colorBackgroundPopup = arrayTheme[indexModal].colorBackgroundPopup
+    colorBackgroundAppsidebar = arrayTheme[indexModal].colorBackgroundAppsidebar
+    colorBackgroundHeader = arrayTheme[indexModal].colorBackgroundHeader
+    colorIsBackground = appConfig.colorIsBackground
+}
+
+updateTheme()
+
+function setRootStyle(name, value) {
+    rootStyle.setProperty(name, value)
+} 
+
+function updateTheme() {
+    const app = document.querySelector('.app')
+    if(!colorIsBackground) {
+        app.style.backgroundImage = `url(${backGround})`
+        app.style.backgroundColor = `unset`
+    }else {
+        app.style.backgroundImage = `unset`
+        app.style.backgroundColor = `${backGround}`
+    }
+    setRootStyle('--text-color-main', textColorMain)
+    setRootStyle('--text-color-main-reverse', textColorMainReverse)
+    setRootStyle('--text-color-suporting', textColorSuporting)
+    setRootStyle('--color-main', colorMain)
+    setRootStyle('--color-paner', colorPaner)
+    setRootStyle('--item-hover', itemHover)
+    setRootStyle('--background-color-popup', colorBackgroundPopup)
+    setRootStyle('--background-appsidebar', colorBackgroundAppsidebar)
+    setRootStyle('--background-header', colorBackgroundHeader)
+    if(document.querySelector('.them--active')) {
+        document.querySelector('.them--active').classList.remove('them--active')
+    }
+    document.querySelector(`.theme__list-item[indexthemvalue="${indexItemTheme}"]`).classList.add('them--active')
+}
+
+function hidenModal(modal) {
+    modal.style.display = 'none'
+}
+
+function handleClickTheme() {
+    const btnTheme = document.querySelector('.app__content-heading-theme')
+    const modal = document.querySelector('.modal')
+    const modalBody = modal.querySelector('.modal__body')
+    const btncloseModal = document.querySelector('.btn-modal-close')
+    modalBody.onclick = function(e) {e.stopPropagation()}
+
+    btnTheme.onclick = function() {
+        modal.style.display = 'flex'
+    }
+    
+    btncloseModal.onclick = function() {
+        hidenModal(modal)
+    }
+    
+    modal.onclick = function() {
+        hidenModal(modal)
+    }
+
+    function onclickItemModal() {
+        const listItemModal = document.querySelectorAll('.theme__list-item')
+
+        for(let i = 0; i < listItemModal.length; i++) {
+            listItemModal[i].onclick = function(e) {
+                if(window.innerWidth < 1023) {
+                    listItemModal[i].classList.add('btn-apply')
+                }
+                if(e.target.closest('.btn-apply')) {
+                    const indexModal = Number(listItemModal[i].getAttribute("indexthemvalue"))
+                    backGround = arrayTheme[indexModal].backGround
+                    textColorMain = arrayTheme[indexModal].textColorMain
+                    textColorSuporting = arrayTheme[indexModal].textColorSuporting
+                    textColorMainReverse = arrayTheme[indexModal].textColorMainReverse
+                    colorMain = arrayTheme[indexModal].colorMain
+                    colorPaner = arrayTheme[indexModal].colorPaner
+                    itemHover = arrayTheme[indexModal].itemHover
+                    colorBackgroundPopup = arrayTheme[indexModal].colorBackgroundPopup
+                    colorBackgroundAppsidebar = arrayTheme[indexModal].colorBackgroundAppsidebar
+                    colorBackgroundHeader = arrayTheme[indexModal].colorBackgroundHeader
+                    indexItemTheme = indexModal
+                    if(listItemModal[i].classList.contains("isBackground")) colorIsBackground = false;
+                    else colorIsBackground = true;
+                    setConfig('indexItemTheme', indexModal)
+                    setConfig('colorIsBackground', (!listItemModal[i].classList.contains("isBackground")))
+                    setTimeout(function() {
+                        updateTheme()
+                        hidenModal(modal)
+                    }, 200)
+                }
+            }
+        }
+    }
+
+    onclickItemModal()
+}
+
+handleClickTheme()
 
 const lecngthMS = songs.length;
 
