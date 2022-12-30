@@ -404,7 +404,7 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    color: var(--text-color-main);
+    color: white;
     font-size: 1.4rem;
     background-image: linear-gradient(117deg, rgb(90, 75, 231), rgb(200, 109, 215) 102%);
     cursor: pointer;

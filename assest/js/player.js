@@ -25,18 +25,8 @@ const rootStyle = document.documentElement.style
 var isLoop = false;
 var isRandom = false;
 var currentSong = 0;
-var colorIsBackground = false;
-var indexItemTheme = 0
-var backGround = './assest/img/theme/themetheme/themebackground/xone.jpg'
-var textColorMain = 'white'
-var textColorSuporting = '#999'
-var textColorMainReverse = 'black'
-var colorMain = '#d1ab00'
-var colorPaner = 'rgb(248, 231, 28)'
-var itemHover = 'rgba(255, 255, 255, 0.1)'
-var colorBackgroundPopup = '#4F4F4F'
-var colorBackgroundAppsidebar = 'rgba(0, 0, 0, 0.2)'
-var colorBackgroundHeader = 'rgba(0, 0, 0, 0.5)'
+var colorIsBackground = true;
+var indexItemTheme = 12
 
 const KEY__SETTING__LOAD = 'config';
 var appConfig = JSON.parse(localStorage.getItem(KEY__SETTING__LOAD)) || {}
@@ -564,19 +554,8 @@ loadTheme()
 
 var arrayTheme = ((themeTheme.concat(themeSinger)).concat(themeColorBack)).concat(themeColorLight)
 
-if(appConfig.indexItemTheme) {
-    const indexModal = appConfig.indexItemTheme.toFixed(0)
-    indexItemTheme = indexModal
-    backGround = arrayTheme[indexModal].backGround
-    textColorMain = arrayTheme[indexModal].textColorMain
-    textColorSuporting = arrayTheme[indexModal].textColorSuporting
-    textColorMainReverse = arrayTheme[indexModal].textColorMainReverse
-    colorMain = arrayTheme[indexModal].colorMain
-    colorPaner = arrayTheme[indexModal].colorPaner
-    itemHover = arrayTheme[indexModal].itemHover
-    colorBackgroundPopup = arrayTheme[indexModal].colorBackgroundPopup
-    colorBackgroundAppsidebar = arrayTheme[indexModal].colorBackgroundAppsidebar
-    colorBackgroundHeader = arrayTheme[indexModal].colorBackgroundHeader
+if(appConfig.indexItemTheme.toFixed()) {
+    indexItemTheme = appConfig.indexItemTheme
     colorIsBackground = appConfig.colorIsBackground
 }
 
@@ -589,21 +568,21 @@ function setRootStyle(name, value) {
 function updateTheme() {
     const app = document.querySelector('.app')
     if(!colorIsBackground) {
-        app.style.backgroundImage = `url(${backGround})`
+        app.style.backgroundImage = `url(${arrayTheme[indexItemTheme].backGround})`
         app.style.backgroundColor = `unset`
     }else {
         app.style.backgroundImage = `unset`
-        app.style.backgroundColor = `${backGround}`
+        app.style.backgroundColor = `${arrayTheme[indexItemTheme].backGround}`
     }
-    setRootStyle('--text-color-main', textColorMain)
-    setRootStyle('--text-color-main-reverse', textColorMainReverse)
-    setRootStyle('--text-color-suporting', textColorSuporting)
-    setRootStyle('--color-main', colorMain)
-    setRootStyle('--color-paner', colorPaner)
-    setRootStyle('--item-hover', itemHover)
-    setRootStyle('--background-color-popup', colorBackgroundPopup)
-    setRootStyle('--background-appsidebar', colorBackgroundAppsidebar)
-    setRootStyle('--background-header', colorBackgroundHeader)
+    setRootStyle('--text-color-main', arrayTheme[indexItemTheme].textColorMain)
+    setRootStyle('--text-color-main-reverse', arrayTheme[indexItemTheme].textColorMainReverse)
+    setRootStyle('--text-color-suporting', arrayTheme[indexItemTheme].textColorSuporting)
+    setRootStyle('--color-main', arrayTheme[indexItemTheme].colorMain)
+    setRootStyle('--color-paner', arrayTheme[indexItemTheme].colorPaner)
+    setRootStyle('--item-hover', arrayTheme[indexItemTheme].itemHover)
+    setRootStyle('--background-color-popup', arrayTheme[indexItemTheme].colorBackgroundPopup)
+    setRootStyle('--background-appsidebar', arrayTheme[indexItemTheme].colorBackgroundAppsidebar)
+    setRootStyle('--background-header', arrayTheme[indexItemTheme].colorBackgroundHeader)
     if(document.querySelector('.them--active')) {
         document.querySelector('.them--active').classList.remove('them--active')
     }
@@ -642,22 +621,11 @@ function handleClickTheme() {
                     listItemModal[i].classList.add('btn-apply')
                 }
                 if(e.target.closest('.btn-apply')) {
-                    const indexModal = Number(listItemModal[i].getAttribute("indexthemvalue"))
-                    backGround = arrayTheme[indexModal].backGround
-                    textColorMain = arrayTheme[indexModal].textColorMain
-                    textColorSuporting = arrayTheme[indexModal].textColorSuporting
-                    textColorMainReverse = arrayTheme[indexModal].textColorMainReverse
-                    colorMain = arrayTheme[indexModal].colorMain
-                    colorPaner = arrayTheme[indexModal].colorPaner
-                    itemHover = arrayTheme[indexModal].itemHover
-                    colorBackgroundPopup = arrayTheme[indexModal].colorBackgroundPopup
-                    colorBackgroundAppsidebar = arrayTheme[indexModal].colorBackgroundAppsidebar
-                    colorBackgroundHeader = arrayTheme[indexModal].colorBackgroundHeader
-                    indexItemTheme = indexModal
+                    indexItemTheme = Number(listItemModal[i].getAttribute("indexthemvalue"))
                     if(listItemModal[i].classList.contains("isBackground")) colorIsBackground = false;
                     else colorIsBackground = true;
-                    setConfig('indexItemTheme', indexModal)
-                    setConfig('colorIsBackground', (!listItemModal[i].classList.contains("isBackground")))
+                    setConfig('indexItemTheme', indexItemTheme)
+                    setConfig('colorIsBackground', colorIsBackground)
                     setTimeout(function() {
                         updateTheme()
                         hidenModal(modal)

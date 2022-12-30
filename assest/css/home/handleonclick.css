@@ -54,7 +54,6 @@
     left: 0;
     right: 0;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    /* color: ; */
 }
 
 .app__content.on-individual .individual,

@@ -756,7 +756,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 4.5rem;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px var(--text-color-main);
     align-self: flex-end;
     font-weight: 500;
 }
@@ -821,7 +821,7 @@
     font-weight: 600;
     color: white;
     letter-spacing: 1px;
-    text-shadow: 0 0px 5px black;
+    text-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
     padding-top: 8px;
     overflow: hidden;
     white-space: nowrap;
@@ -941,6 +941,7 @@
     width: 40px;
     height: 40px;
     background-color: var(--color-main);
+    color: var(--text-color-main-reverse);
     border-radius: 50%;
     display: flex;
     justify-content: center;
