@@ -49,6 +49,13 @@ if(appConfig.volumeValue) {
 
 var songs = [
     {
+        audio: './assest/audio/y2meta.com - Tết Bình An - Hana Cẩm Tiên x DN Team Remix _ một năm cũ đã qua cùng nhau đón năm mới bình an (128 kbps).mp3',
+        author: 'Hana Cẩm Tiên, DN Team',
+        title: 'Tết Bình An Remix',
+        thumb: './assest/img/music/tetbinhan.jpg',
+        duratime: '04:01'
+    },
+    {
         audio: './assest/audio/y2meta.com - Chuyện Cũ Bỏ Qua Remix Chill Ke - Bích Phương ( J02 Remix ) _ Nhạc Chill Ke Tết 2021 Hot Tik Tok (128 kbps).mp3',
         author: 'Bích Phương, J02 Remix',
         title: 'Chuyện Cũ Bỏ Qua Remix',
@@ -554,7 +561,7 @@ loadTheme()
 
 var arrayTheme = ((themeTheme.concat(themeSinger)).concat(themeColorBack)).concat(themeColorLight)
 
-if(appConfig.indexItemTheme.toFixed()) {
+if(appConfig.indexItemTheme) {
     indexItemTheme = appConfig.indexItemTheme
     colorIsBackground = appConfig.colorIsBackground
 }
@@ -624,7 +631,7 @@ function handleClickTheme() {
                     indexItemTheme = Number(listItemModal[i].getAttribute("indexthemvalue"))
                     if(listItemModal[i].classList.contains("isBackground")) colorIsBackground = false;
                     else colorIsBackground = true;
-                    setConfig('indexItemTheme', indexItemTheme)
+                    setConfig('indexItemTheme', indexItemTheme.toFixed())
                     setConfig('colorIsBackground', colorIsBackground)
                     setTimeout(function() {
                         updateTheme()

@@ -66,6 +66,7 @@
 }
 
 .app__sidebar-item{
+    position: relative;
     cursor: pointer;
     padding: 10px 0;
 }
@@ -85,6 +86,8 @@
 }
 
 .app__sidebar-item-icon {
+    width: 20px;
+    align-items: center;
     color: var(--text-color-main);
     font-size: 1.5rem;
 }
@@ -95,6 +98,21 @@
     font-size: 1.4rem;
     font-weight: 500;
     margin-left: 8px;
+}
+
+.item-active.app__sidebar-item {
+    border-left: unset;
+    
+}
+
+.item-active.app__sidebar-item::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-main);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .item-active.app__sidebar-item .app__sidebar-item-icon,
