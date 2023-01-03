@@ -100,21 +100,6 @@
     margin-left: 8px;
 }
 
-.item-active.app__sidebar-item {
-    border-left: unset;
-    
-}
-
-.item-active.app__sidebar-item::before {
-    content: "";
-    width: 3px;
-    height: 100%;
-    background-color: var(--color-main);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .item-active.app__sidebar-item .app__sidebar-item-icon,
 .item-active .app__sidebar-item-title {
     color: var(--color-main);
